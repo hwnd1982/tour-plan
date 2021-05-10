@@ -4,9 +4,346 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Best Tour Plan</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  
+<body class="site-page">
+  <!-- Шапка сайта: Навигация -->
+  <header class="header">
+    <div class="sections navbar">
+      <h1 class="logo">Best <span>tour</span> plan</h1>
+      <div class="search-bar">
+        <input type="search" name="search" class="find-bar" placeholder="Search Location">
+        <button type="submit" class="find-button">
+          <svg class="icon icon-search" width="16" height="16">
+            <use href="img/icons.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- /.search-bar -->
+      <div class="profile">
+        <img src="img/user-avatar.jpg" alt="Аватар Пользователя" class="user-avatar">
+        <span class="user-name">Nathan</span>
+      </div>
+      <!-- /.profile -->
+    </div>
+    <!-- /.navbar -->
+    <div class="sections navbar-bottom">
+      <a href="#" class="navbar-items">All Deals</a>
+      <a href="#" class="navbar-items">Hotels</a>
+      <a href="#" class="navbar-items">Activities</a>
+      <a href="#" class="navbar-items">Hotel Day Packages</a>
+      <a href="#" class="navbar-items">Restaurants</a>
+      <a href="#" class="navbar-items">Events</a>
+      <a href="#" class="navbar-items">Rodrigues</a>
+    </div>
+    <!-- /.navbar-bottom -->
+  </header>
+  <!-- Главная страница -->
+  <section class="sections hotel-card">
+    <div class="bread-rumb">
+      <a href="#" class="catalogue-category">Home</a>
+      <span> / </span>
+      <a href="#" class="catalogue-category">Flash Offers</a>
+      <span> / </span>
+      <a href="#" class="catalogue-category">Grand Hilton Hotel</a>
+    </div>
+    <!-- /.path-related -->
+    <div class="hotel-info">
+      <div class="hotel-name">
+        <div class="hotel-category">
+          <svg class="icon icon-star" width="8" height="8">
+            <use href="img/icons.svg#star"></use>
+          </svg>
+          <svg class="icon icon-star" width="8" height="8">
+            <use href="img/icons.svg#star"></use>
+          </svg>
+          <svg class="icon icon-star" width="8" height="8">
+            <use href="img/icons.svg#star"></use>
+          </svg>
+          <svg class="icon icon-star" width="8" height="8">
+            <use href="img/icons.svg#star"></use>
+          </svg>
+          <svg class="icon icon-star" width="8" height="8">
+            <use href="img/icons.svg#star"></use>
+          </svg>
+        </div>
+        <!-- /.hotel-category -->
+        <div class="hotel-title-group">
+          <h2 class="hotel-title">GRAND HILTON HOTEL</h2>
+          <div class="offer"><span>Flash Offer</span></div>
+          <!-- /.offer -->
+        </div>
+        <!-- /.hotel-title-group -->
+        <span class="hotel-sub-title">Half-Board/ All Inclusive + Complimentary Activities + Child Stays Free</span>
+      </div>
+      <!-- /.hotel-name -->
+      <div class="hotel-ratings">
+        <span class="user-rattings">User Rattings</span>
+        <span class="ratting">4.5/<span>5</span></span>
+      </div>
+      <!-- /.hotel-ratings -->
+    </div>
+    <!-- /.hotel-info -->
+    <div class="visual-box">
+      <div class="hotel-slider-box">
+        <div class="hotel-slider-switches">
+          <div class="button-prev">
+            <svg class="icon hotel-arrows arrow-left" width="10" height="17.5">
+              <use href="img/icons.svg#arrow"></use>
+            </svg>
+          </div>
+          <!-- /.button-prev -->
+          <div class="button-next">
+            <svg class="icon hotel-arrows arrow-right" width="10" height="17.5">
+              <use href="img/icons.svg#arrow"></use>
+            </svg>
+          </div>
+          <!-- /.button-next -->
+        </div>
+        <!-- /.hotel-slider-switches -->
+        <img src="img/hotel-view.jpg" alt="" class="hotel-view">
+      </div>
+      <!-- /.slider-box -->
+      <div class="booking-and-map">
+        <div class="booking-card">
+          <div class="booking-info">
+            <div class="price-block">
+              <span class="price-starts">price starts as</span>
+              <span class="price">$ 8,500</span>
+              <span class="per-room">per room / night</span>
+            </div>
+            <!-- /.price-block -->
+            <div class="person-room-block">
+              <div class="guests">
+                <svg class="icon icon-guest" width="14" height="14">
+                  <use href="img/icons.svg#guest"></use>
+                </svg>
+                <span class="guests-count">2 x Guests</span>
+              </div>
+              <!-- /.guests -->
+              <div class="room">
+                <svg class="icon icon-room" width="14" height="14">
+                  <use href="img/icons.svg#room"></use>
+                </svg>
+                <span class="room-count">1 x Room</span>
+              </div>
+              <!-- /.room -->
+            </div>
+            <!-- /.person-room-block -->
+          </div>
+          <!-- /.booking-info -->
+          <div class="quick-booking-group">
+            <span class="quick-booking">Quick Booking</span>
+            <div class="quick-booking-call">
+              <svg class="icon icon-call" width="14" height="14">
+                <use href="img/icons.svg#call"></use>
+              </svg>
+              <span class="call-num">12100</span>
+            </div>
+            <!-- /.quick-booking-call -->
+          </div>
+          <!-- /.quick-booking-group -->
+          <button class="booking-options">View Other Options</button>
+        </div>
+        <!-- /.booking-card -->
+        <div class="map-card">
+          <img src="img/map.png" alt="" class="map">
+        </div>
+        <!-- /.map-card -->
+      </div>
+      <!-- /.booking-and-map -->
+    </div>
+    <!-- /.visual-box -->
+  </section>
+  <!-- Подписка -->
+  <section class="sections subscribe">
+    <div class="newsletter">
+      <div class="wrapper-newsletter">
+        <img src="img/newsletter-bg.jpg" alt="" class="newsletter-bg">
+        <div class="subscribe-text-block">
+          <span class="subscribe-sub-title">subscribe to our</span>
+          <span class="subscribe-title">Newsletter</span>
+        </div>
+        <!-- /.subscribe-text-block -->
+        <div class="subscribe-bar">
+          <input type="email" name="email" class="mail-bar" placeholder="Your email address" autocomplete="off">
+           <button type="submit" class="subscribe-button">Send</button> -->
+        </div>
+        <!-- .search-bar -->
+      </div>
+      <!-- /.newsletter-wrapper -->
+    </div>
+    <!-- /.newsletter -->
+  </section>
+  <!-- Отзовы посетителей -->
+  <section class="sections guest-review">
+    <h2 class="about-us">What people think about us</h2>
+    <div class="review-slider-box">
+      <div class="review-slider-switches">
+        <div class="button-prev">
+          <svg class="icon review-arrows arrow-left" width="10" height="17.5">
+            <use href="img/icons.svg#arrow"></use>
+          </svg>
+        </div>
+        <!-- /.button-prev -->
+        <div class="button-next">
+          <svg class="icon review-arrows arrow-right" width="10" height="17.5">
+            <use href="img/icons.svg#arrow"></use>
+          </svg>
+        </div>
+        <!-- /.button-next -->
+      </div>
+      <!-- /.review-slider-switches -->
+      <div class="review-slide">
+        <div class="review-wrapper-card">
+          <div class="review-card">
+            <div class="profile-card">
+              <div class="profile-avatar">
+                <img src="img/Megan Fox.jpg" alt="" class="profile-img">
+              </div>
+              <!-- /.profile-avatar -->
+              <span class="review-autor">Megan Fox</span>
+              <span class="review-date">Stayed 18 Nov, 2019</span>
+              <div class="review-stars">
+                <svg class="icon icon-star" width="8" height="8">
+                  <use href="img/icons.svg#star"></use>
+                </svg>
+                <svg class="icon icon-star" width="8" height="8">
+                  <use href="img/icons.svg#star"></use>
+                </svg>
+                <svg class="icon icon-star" width="8" height="8">
+                  <use href="img/icons.svg#star"></use>
+                </svg>
+                <svg class="icon icon-star" width="8" height="8">
+                  <use href="img/icons.svg#star"></use>
+                </svg>
+                <svg class="icon icon-star" width="8" height="8">
+                  <use href="img/icons.svg#star"></use>
+                </svg>
+              </div>
+            </div>
+            <!-- /.profile-card -->
+            <div class="review-decor">
+              <svg class="icon icon-quotes quotes-open" width="70" height="47.59">
+                <use href="img/icons.svg#quotes"></use>
+              </svg>
+              <svg class="icon icon-quotes quotes-close" width="70" height="47.59">
+                <use href="img/icons.svg#quotes"></use>
+              </svg>
+            </div>
+            <!-- /.review-decor -->
+            <p class="review-text">
+              It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue was
+              only
+              that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of gallery
+              which
+              were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location is not good as per
+              atmosphere, it is very nearby most of the popular places but self location in a narrow street is not good. Overall
+              it
+              was a good experience and could recommend.
+            </p>
+          </div>
+          <!-- /.review-card -->
+        </div>
+        <!-- /.review-wrapper-card -->
+      </div>
+      <!-- /.review-slide -->
+    </div>
+    <!-- /.review-slider-box -->
+  </section>
+  <!-- Другие возможности -->
+  <section class="sections other-activities">
+    <h2 class="activities-title">Other Activities</h2>
+    <div class="wrapper-activities">
+      <div class="activities-block">
+        <img src="img/chamarel.jpg" alt="" class="activities-block-img">
+        <span class="activities-block-text">The curious corner of chamarel</span>
+        <button class="activities-block-button">Book Now</button>
+      </div>
+      <!-- /.activities-block -->
+      <div class="activities-block">
+        <img src="img/golf.jpg" alt="" class="activities-block-img">
+        <span class="activities-block-text">Gymkhana club golf course</span>
+        <button class="activities-block-button">Book Now</button>
+      </div>
+      <!-- /.activities-block -->
+      <div class="activities-block">
+        <img src="img/falls.jpg" alt="" class="activities-block-img">
+        <span class="activities-block-text">Tamarind falls hiking trip - full day</span>
+        <button class="activities-block-button">Book Now</button>
+      </div>
+      <!-- /.activities-block -->
+      <div class="activities-block">
+        <img src="img/quest.jpg" alt="" class="activities-block-img">
+        <span class="activities-block-text">The blue marine discovery quest</span>
+        <button class="activities-block-button">Book Now</button>
+      </div>
+      <!-- /.activities-block -->
+    </div>
+    <!-- /.wrapper-activities -->
+  </section>
+  <!-- Подвал -->
+  <section class="sections footer">
+    <div class="footer-top">
+      <div class="right-footer-top">
+        <div class="footer-logo">
+          <span class="footer-logo-text">Best<br><span>tour</span><br>plan</span>
+        </div>
+        <!-- /.footer-logo -->
+        <div class="information all-categories">
+          <span class="information-title all-categories-title">ALL CATEGORIES</span>
+          
+          <span class="information-item all-categories-item">All Deals</span>
+          <span class="information-item all-categories-item">Hotels</span>
+          <span class="information-item all-categories-item">Activities</span>
+          <span class="information-item all-categories-item">Spa Packages</span>
+          <span class="information-item all-categories-item">Hotel Day Packages</span>
+          <span class="information-item all-categories-item">Restaurants</span>
+          <span class="information-item all-categories-item">Fitness</span>
+          <span class="information-item all-categories-item">Rodrigues</span>
+        </div>
+        <!-- /.all-categories -->
+      </div>
+      <!-- /.right-footer-top -->
+      <div class="left-footer-top">
+        <div class="information additional-information">
+          <span class="information-title additional-information-title">ADDITIONAL INFORMATION</span>
+
+          <span class="information-item additional-information-item">About Us</span>
+          <span class="information-item additional-information-item">Contact Us</span>
+          <span class="information-item additional-information-item">How does it work?</span>
+          <span class="information-item additional-information-item">Frequently Asked Questions</span>
+          <span class="information-item additional-information-item">Deals.mu loyalty program</span>
+          <span class="information-item additional-information-item">Promote your Business on BTP</span>
+        </div>
+        <!-- /.additional-information -->
+        <div class="information legal-information">
+          <span class="information-title legal-information-title">LEGAL INFORMATION</span>
+
+          <span class="information-item legal-information-item">Terms & Conditions</span>
+          <span class="information-item legal-information-item">Disclaimer</span>
+          <span class="information-item legal-information-item">Cancellation policy</span>
+          <span class="information-item legal-information-item">Privacy</span>
+        </div>
+        <div class="information social-network">
+          <span class="information-title social-network-title">Social Network</span>
+        </div>
+        <!-- /.social-network -->
+        <!-- /.legal-information -->
+      </div>
+      <!-- /.left-footer-top -->
+    </div>
+    <!-- /.footer-top -->
+  </section>
 </body>
 </html>
