@@ -1,14 +1,30 @@
 .header
-  background-color: #ffffff
   &-top
+    background-color: $alt-text-color
+    &__container
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-top: 40px
+      padding-bottom: 40px
+  &__search
     display: flex
-    align-items: center
-    justify-content: space-between
-    padding-top: 40px
-    padding-bottom: 40px
-    &__search
-      margin-right: auto
-      margin-left: 108px
+    margin-right: auto
+    margin-left: 108px
+  &-menu
+    background-color: #0a223d
+    &__container
+      display: flex
+      padding-top: 31px
+      padding-bottom: 31px
+      justify-content: space-between
+    &__link
+      color: $alt-text-color
+      text-decoration: none
+      font-weight: bold
+      font-size: 14px
+      line-height: 18px
+      text-transform: uppercase
 .search
   display: flex
   position: relative
@@ -24,6 +40,7 @@
     font-size: 12px
     line-height: 15px
     border: none
+    outline: none
     color: $text-color
   &__button
     position: absolute

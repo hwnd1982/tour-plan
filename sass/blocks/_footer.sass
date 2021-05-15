@@ -1,0 +1,49 @@
+.footer
+  background-color: #0a223d
+  &-top
+    display: flex
+    position: relative
+    padding-top: 108px
+    padding-bottom: 89px
+    justify-content: space-between
+    flex-wrap: wrap
+  &__logo
+    margin-top: 21px
+  &__menu
+    &:nth-last-child(1)
+      position: absolute
+      bottom: 89px
+      left: 50%
+.social-network
+  display: flex
+  align-items: center
+  color: $alt-text-color
+  &__title
+    margin-right: 41px
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+  &__link
+    display: flex
+    align-items: center
+    fill: $link-color
+    &:not(:last-child)
+      margin-right: 10px
+.nav-menu
+  display: flex
+  flex-direction: column
+  color: $alt-text-color
+  &__title
+    margin-bottom: 20px
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+  &__link
+    color: inherit
+    font-weight: normal
+    font-size: 14px
+    line-height: 160%
+    color: $link-color
+    text-decoration: none

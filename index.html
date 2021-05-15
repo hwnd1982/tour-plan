@@ -9,65 +9,133 @@
     href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
     rel="stylesheet"
   />
-
   <link rel="stylesheet" href="css/style.css">
-
   <title>Best Tour Plan - Hotel Booking </title>
 </head>
 
 <body>
-
+  <!-- Шапка -->
   <header class="header">
-    <div class="container">
-
-      <div class="header-top">
+    <div class="header-top">
+      <div class="container header-top__container">
+        <!-- Лого -->
         <a href="#" class="logo">
           <img src="img/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__img">
         </a>
-
+        <!-- Форма поиска -->
         <form action="#" class="search header__search">
           <input type="text" class="search__input" placeholder="Search Location">
           <button class="search__button">
             <img src="img/search.svg" alt="Icon: search">
           </button>
         </form>
-
+        <!-- Пользователь -->
         <a href="#" class="user">
-          <img src="img/user-avatar.jpg" alt="avatar: Nathan" class="avatar user__avatar">
+          <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="avatar user__avatar">
           <span class="user__name">Nathan</span>
         </a>
-
       </div>
-      <!-- /.header-top -->
-
-      <nav class="header-menu">
-        <a href="#" class="header-menu__link">All Deals</a>
-        <a href="#" class="header-menu__link">Hotels</a>
-        <a href="#" class="header-menu__link">Activities</a>
-        <a href="#" class="header-menu__link">Hotel Day Packages</a>
-        <a href="#" class="header-menu__link">Restaurants</a>
-        <a href="#" class="header-menu__link">Events</a>
-        <a href="#" class="header-menu__link">Rodrigues</a>
-      </nav>
-      <!-- /.header-menu -->
-
+      <!-- /.container -->
     </div>
-    <!-- /.container -->
+    <!-- /.header-top -->
+    <nav class="header-menu">
+        <div class="container header-menu__container">
+          <a href="#" class="header-menu__link">All Deals</a>
+          <a href="#" class="header-menu__link">Hotels</a>
+          <a href="#" class="header-menu__link">Activities</a>
+          <a href="#" class="header-menu__link">Hotel Day Packages</a>
+          <a href="#" class="header-menu__link">Restaurants</a>
+          <a href="#" class="header-menu__link">Events</a>
+          <a href="#" class="header-menu__link">Rodrigues</a>
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- /.header-menu -->
   </header>
-  
+  <!-- Временная пустая секция -->
+  <section style="width: 100%; height: 20px">
+  </section>
+  <!-- Подвал -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <img
-          src="img/vertical-logo.svg"
-          alt="Logo: Best Tour Plan"
-          class="logo__img"
-        >
+        <div class="footer__logo">
+          <img
+            src="img/vertical-logo.svg"
+            alt="Logo: Best Tour Plan"
+            class="logo__img"
+          >
+        </div>
+        <!-- /.footer__logo -->
+        <nav class="footer__menu nav-menu">
+          <span class="nav-menu__title">ALL CATEGORIES</span>
+          
+          <a href="#" class="nav-menu__link">All Deals</a>
+          <a href="#" class="nav-menu__link">Hotels</a>
+          <a href="#" class="nav-menu__link">Activities</a>
+          <a href="#" class="nav-menu__link">Spa Packages</a>
+          <a href="#" class="nav-menu__link">Hotel Day Packages</a>
+          <a href="#" class="nav-menu__link">Restaurants</a>
+          <a href="#" class="nav-menu__link">Fitness</a>
+          <a href="#" class="nav-menu__link">Rodrigues</a>
+        </nav>
+        <!-- /.all-categories -->
+        <nav class="footer__menu nav-menu">
+          <span class="nav-menu__title">ADDITIONAL INFORMATION</span>
+          
+          <a href="#" class="nav-menu__link">About Us</a>
+          <a href="#" class="nav-menu__link">Contact Us</a>
+          <a href="#" class="nav-menu__link">How does it work?</a>
+          <a href="#" class="nav-menu__link">Frequently Asked Questions</a>
+          <a href="#" class="nav-menu__link">Deals.mu loyalty program</a>
+          <a href="#" class="nav-menu__link">Promote your Business on BTP</a>
+        </nav>
+        <!-- /.additional-information -->
+        <nav class="footer__menu nav-menu">
+          <span class="nav-menu__title">LEGAL INFORMATION</span>
+          
+          <a href="#" class="nav-menu__link">Terms & Conditions</a>
+          <a href="#" class="nav-menu__link">Disclaimer</a>
+          <a href="#" class="nav-menu__link">Cancellation policy</a>
+          <a href="#" class="nav-menu__link">Privacy</a>
+        </nav>
+        <!-- /.legal-information -->
+        <div class="footer__menu social-network">
+          <span class="social-network__title">Social Network</span>
+          
+          <a href="#" class="social-network__link">
+            <svg
+              class="social-network__icon icon-facebook"
+              width="20"
+              height="20"
+            >
+              <use href="img/icons.svg#facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="social-network__link">
+            <svg
+              class="social-network__icon icon-youtube"
+              width="20"
+              height="20"
+            >
+              <use href="img/icons.svg#youtube"></use>
+            </svg>
+          </a>
+          <a href="#" class="social-network__link">
+            <svg
+              class="social-network__icon icon-instagram"
+              width="20"
+              height="20"
+            >
+              <use href="img/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </div>
+        <!-- /.social-network -->
       </div>
       <!-- /.footer-top -->
     </div>
     <!-- /.container -->
   </footer>
-
 </body>
 </html>
