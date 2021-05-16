@@ -439,6 +439,10 @@ template {
   background-color: #ec1f46;
 }
 
+.search__icon {
+  fill: #ffffff;
+}
+
 .user {
   display: -webkit-box;
   display: -ms-flexbox;
