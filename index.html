@@ -62,6 +62,7 @@
   <section class="hotels">
     
     <div class="container">
+
       <nav class="nav-tree">
         <a href="#" class="nav-tree__link">Home</a>
         <span class="nav-tree__divider"> / </span>
@@ -71,58 +72,165 @@
       </nav>
 
       <div class="info hotel__info">
-        <div class="info__rating">
-          <svg
-            class="info__rating-star icon-star"
-            width="8"
-            height="8"
-          >
-            <use href="img/icons.svg#star"></use>
-          </svg>
-          <svg
-            class="info__rating-star icon-star"
-            width="8"
-            height="8"
-          >
-            <use href="img/icons.svg#star"></use>
-          </svg>
-          <svg
-            class="info__rating-star icon-star"
-            width="8"
-            height="8"
-          >
-            <use href="img/icons.svg#star"></use>
-          </svg>
-          <svg
-            class="info__rating-star icon-star"
-            width="8"
-            height="8"
-          >
-            <use href="img/icons.svg#star"></use>
-          </svg>
-          <svg
-            class="info__rating-star icon-star"
-            width="8"
-            height="8"
-          >
-            <use href="img/icons.svg#star"></use>
-          </svg>
+        <div class="info__text-container">
+          <div class="info__text-group">
+            <div class="info__rating">
+              <svg
+                class="info__rating-star icon-star"
+                width="8"
+                height="8"
+              >
+                <use href="img/icons.svg#star"></use>
+              </svg>
+              <svg
+                class="info__rating-star icon-star"
+                width="8"
+                height="8"
+              >
+                <use href="img/icons.svg#star"></use>
+              </svg>
+              <svg
+                class="info__rating-star icon-star"
+                width="8"
+                height="8"
+              >
+                <use href="img/icons.svg#star"></use>
+              </svg>
+              <svg
+                class="info__rating-star icon-star"
+                width="8"
+                height="8"
+              >
+                <use href="img/icons.svg#star"></use>
+              </svg>
+              <svg
+                class="info__rating-star icon-star"
+                width="8"
+                height="8"
+              >
+                <use href="img/icons.svg#star"></use>
+              </svg>
+            </div>
+            <!-- /.info__rating -->
+            <h1 class="info__name">GRAND HILTON HOTEL</h1>
+            <span class="info__offer">Flash Offer</span>
+            <div class="info__tags">
+              <a
+                href="#"
+                class="info__catigory"
+              >Half-Board</a>
+              <a
+                href="#"
+                class="info__options"
+              >All Inclusive</a>
+              <a
+                href="#"
+                class="info__options"
+              >Complimentary Activities</a>
+              <a
+                href="#"
+                class="info__options"
+              >Child Stays Free</a>
+            </div>
+            <!-- /.info__tags -->
+          </div>
+          <!-- /.info__text-group -->
+          <div class="info__user-ratings">
+            <span class="info__user-ratings-title">User Rattings</span>
+            <span class="info__user-ratings-count">4.5</span>
+            <span class="info__user-ratings-max">5</span>
+          </div>
+          <!-- /.info__user-ratings -->
         </div>
-        <!-- /.info__rating -->
-        <h1 class="info__name">GRAND HILTON HOTEL</h1>
-        <span class="info__offer">Flash Offer</span>
-        <!-- /.info__offer -->
-        <div class="info__tags">
-          <a href="#" class="info__catigory">Half-Board</a>
-          <a href="#" class="info__options">All Inclusive</a>
-          <a href="#" class="info__options">Complimentary Activities</a>
-          <a href="#" class="info__options">Child Stays Free</a>
+        <!-- /.info__text-container -->
+        <div class="info__main-container">
+          <div class="slider info__slider">
+          <img src="img/hotel-view-1.jpg" alt="" class="slider__img">
+          <div class="slider__buttons-bar">
+            <button class="slider__buttons slider__button-prev">
+              <svg
+                class="slider__button-prev-icon icon-arrows slider__icon-arrows"
+                width="10"
+                height="18"
+              >
+                <use href="img/icons.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="slider__buttons slider__button-next">
+              <svg
+                class="slider__button-next-icon icon-arrows slider__icon-arrows"
+                width="10"
+                height="18"
+              >
+                <use href="img/icons.svg#arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <!-- /.slider__buttons-bar -->
+          </div>
+          <!-- /.info__slider -->
+          <div class="info__additional-container">
+            <form action="#" class="booking-form info__booking-form">
+              <div class="booking-form__price">
+                <span class="booking-form__price-starts">price starts as</span>
+                <span class="booking-form__price-summ">$ 8,500</span>
+                <span class="booking-form__price-per">per room / night</span>
+              </div>
+              <!-- /.booking-form__price -->
+              <div class="booking-form__counter">
+                <span class="booking-form__counter-guests">
+                  <svg
+                    class="guests-icon booking-form__counter-guests-icon"
+                    width="14"
+                    height="14"
+                  >
+                    <use href="img/icons.svg#guests"></use>
+                  </svg>
+                  2 x Guests
+                </span>
+                <span class="booking-form__counter-rooms">
+                  <svg
+                    class="rooms-icon booking-form__counter-rooms-icon"
+                    width="14"
+                    height="14"
+                  >
+                    <use href="img/icons.svg#rooms"></use>
+                  </svg>
+                  1 x Room
+                </span>
+              </div>
+              <!-- /.booking-form__counter -->
+              <div class="booking-form__call">
+                <span class="booking-form__call-offer">Quick Booking</span>
+                <span class="booking-form__call-num">
+                  <svg
+                    class="call-icon booking-form__call-icon"
+                    width="14"
+                    height="14"
+                  >
+                    <use href="img/icons.svg#call"></use>
+                  </svg>
+                  12100
+                </span>
+                <button class="booking-form__button">View Other Options</button>
+              </div>
+              <!-- /.booking-form__call -->
+            </form>
+            <div class="info__map">
+              <img src="img/cover-map.png" alt="" class="info__map-cover">
+            </div>
+          </div>
+          <!-- /.info__additional-container -->
         </div>
-        <!-- /.info__tags -->
+        <!-- /.info__main-container -->
       </div>
       <!-- /.info -->
     </div>
     <!-- /.container -->
+  </section>
+  <!-- Рассылка -->
+  <section class="newsletter">
+    
   </section>
   <!-- Подвал -->
   <footer class="footer">

@@ -493,6 +493,26 @@ template {
 }
 
 .info {
+  padding-bottom: 70px;
+}
+
+.info__text-container {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 23px;
+  padding-bottom: 20px;
+}
+
+.info__text-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,8 +521,6 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 23px;
-  padding-bottom: 20px;
 }
 
 .info__rating {
@@ -556,6 +574,261 @@ template {
 
 .info__options:nth-child(n+3)::before {
   content: " + ";
+}
+
+.info__user-ratings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 65px;
+  height: 45px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding: 9px 6px 6px 7px;
+  color: #ffffff;
+  background-color: #ec1f46;
+  border-radius: 4px;
+}
+
+.info__user-ratings-title {
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+}
+
+.info__user-ratings-count {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.info__user-ratings-count::after {
+  content: "/";
+}
+
+.info__user-ratings-max {
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.info__main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info__slider {
+  width: 100%;
+  margin-right: 30px;
+}
+
+.info__booking-form {
+  width: 350px;
+  height: 210px;
+  margin-bottom: 30px;
+}
+
+.slider {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 122, 223, 0.48)), to(rgba(255, 255, 255, 0.128)));
+  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slider__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -5;
+}
+
+.slider__buttons-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 16px;
+  width: 100%;
+}
+
+.slider__buttons {
+  padding: 6px 10px;
+  background: none;
+  border: none;
+  line-height: 0.8;
+}
+
+.slider__icon-arrows {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.slider__button-next-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.booking-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 27px;
+  font-family: Nunito;
+  font-weight: normal;
+  background: #0a223d;
+  border-radius: 8px;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.booking-form__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.booking-form__price-starts {
+  font-size: 10px;
+  line-height: 14px;
+  margin-bottom: 2px;
+}
+
+.booking-form__price-summ {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.booking-form__price-per {
+  margin-top: -4px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.booking-form__counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.booking-form__counter-guests {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.booking-form__counter-guests-icon {
+  margin-right: 9px;
+}
+
+.booking-form__counter-rooms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.booking-form__counter-rooms-icon {
+  margin-right: 9px;
+}
+
+.booking-form__call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.booking-form__call-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.booking-form__call-icon {
+  margin-right: 8px;
+}
+
+.booking-form__button {
+  width: 100%;
+  background: #ec1f46;
+  padding: 13px 84px;
+  margin-top: 15px;
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 .footer {
