@@ -831,6 +831,91 @@ template {
   line-height: 19px;
 }
 
+.mailing {
+  width: 100%;
+  background-blend-mode: multiply;
+  background-image: url(../img/newsletter-bg.jpg);
+  background-color: rgba(10, 34, 61, 0.8);
+  background-size: cover;
+}
+
+.mailing__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 730px;
+  margin: auto;
+  padding-top: 98px;
+  padding-bottom: 87px;
+}
+
+.mailing__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #ffffff;
+}
+
+.mailing__subtitle {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.mailing__title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
+}
+
+.subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 55px;
+  border-radius: 6px;
+}
+
+.subscribe__input {
+  width: 350px;
+  height: 100%;
+  padding-left: 23px;
+  padding-right: 75px;
+  background-color: #ffffff;
+  font-size: 12px;
+  line-height: 15px;
+  border: none;
+  outline: none;
+  color: #bdbdbd;
+}
+
+.subscribe__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 65px;
+  border: none;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  background-color: #ec1f46;
+}
+
 .footer {
   background-color: #0a223d;
 }
