@@ -824,6 +824,8 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .booking-form__call-icon {
@@ -1205,6 +1207,17 @@ template {
   .info__map-cover {
     width: 100%;
   }
+  .slider__buttons-bar {
+    padding: 28.775% 16px;
+  }
+  .slider__buttons {
+    padding: 2.49px 3.82px;
+    line-height: 0.8;
+  }
+  .slider__icon-arrows {
+    width: 12px;
+    height: 12px;
+  }
   .mailing__container {
     max-width: 556px;
     -webkit-box-orient: vertical;
@@ -1219,6 +1232,16 @@ template {
   }
   .mailing__text {
     margin-bottom: 37px;
+  }
+  .mailing__subtitle {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .mailing__title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
   }
   .subscribe {
     width: 100%;
