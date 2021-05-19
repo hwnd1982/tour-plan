@@ -1110,12 +1110,17 @@ template {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .container, .mailing__container {
-    max-width: 576px;
+    max-width: 596px;
+    width: 88%;
   }
   .navbar__search, .navbar-menu, .navbar__user {
     display: none;
+  }
+  .navbar-top__container {
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
   .navbar .menu-button {
     display: -webkit-box;
@@ -1256,17 +1261,9 @@ template {
 }
 
 @media (max-width: 576px) {
-  .container, .mailing__container {
-    max-width: 460px;
-  }
   .logo {
+    line-height: 14px;
     width: 99px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container, .mailing__container {
-    max-width: 280px;
   }
 }
 /*# sourceMappingURL=style.css.map */

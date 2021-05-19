@@ -62,13 +62,18 @@
       line-height: 23px
     &__link
       font-size: 14px
-@media (max-width: 768px)
+@media (max-width: 767px)
   .container, .mailing__container
-    max-width: 576px
+    max-width: 596px
+    width: 88%
   // Блок header
   .navbar
     &__search, &-menu, &__user
       display: none
+    &-top
+      &__container
+        padding-top: 28px
+        padding-bottom: 28px
     .menu
       &-button
         display: flex
@@ -153,9 +158,10 @@
       flex-basis: 100%
 @media (max-width: 576px)
   .container, .mailing__container
-    max-width: 460px
+    // max-width: 460px
   .logo
+    line-height: 14px
     width: 99px
 @media (max-width: 480px)
   .container, .mailing__container
-    max-width: 280px
+    // max-width: 280px
