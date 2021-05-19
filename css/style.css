@@ -357,11 +357,11 @@ template {
   display: none;
 }
 
-.header-top {
+.navbar-top {
   background-color: #ffffff;
 }
 
-.header-top__container {
+.navbar-top__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -375,7 +375,7 @@ template {
   padding-bottom: 40px;
 }
 
-.header__search {
+.navbar__search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,11 +383,11 @@ template {
   margin-left: 108px;
 }
 
-.header-menu {
+.navbar-menu {
   background-color: #0a223d;
 }
 
-.header-menu__container {
+.navbar-menu__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,7 +398,7 @@ template {
           justify-content: space-between;
 }
 
-.header-menu__link {
+.navbar-menu__link {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
