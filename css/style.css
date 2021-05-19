@@ -1073,7 +1073,7 @@ template {
     max-width: 340px;
   }
   .info__slider {
-    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 30px;
   }
   .slider__buttons-bar {
@@ -1148,6 +1148,9 @@ template {
     height: 1px;
     background-color: #333333;
   }
+  .info {
+    padding-bottom: 40px;
+  }
   .info__text-container {
     padding-top: 5px;
     padding-bottom: 20px;
@@ -1183,6 +1186,7 @@ template {
   }
   .info__slider {
     margin-top: 18px;
+    margin-bottom: 20px;
   }
   .info__additional-container {
     -webkit-box-orient: vertical;
@@ -1193,6 +1197,7 @@ template {
   .info__booking-form {
     max-width: 100%;
     width: 100%;
+    margin-bottom: 20px;
   }
   .info__map {
     max-width: 100%;
