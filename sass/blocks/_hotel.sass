@@ -28,8 +28,13 @@
     flex-wrap: wrap
     align-items: center
   &__rating
+    margin-bottom: 4px
+    font-size: 8px
+    line-height: 6px
     flex-basis: 100%
   &__rating-star
+    font-size: 8px
+    line-height: 8px
     fill: #f2994a
   &__name
     margin-top: 0
@@ -51,12 +56,10 @@
     font-size: 12px
     line-height: 15px
   &__catigory
-    text-decoration: none
     color: $text-color
     &::after
       content: "/"
   &__options
-    text-decoration: none
     color: $text-color
     &:nth-child(n+3)::before
       content: " + "
