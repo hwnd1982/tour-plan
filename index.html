@@ -10,6 +10,7 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/slider.js" defer></script>
   <title>Best Tour Plan - Hotel Booking </title>
 </head>
 
@@ -138,28 +139,51 @@
         <!-- /.info__text-container -->
         <div class="info__main-container">
           <div class="slider info__slider">
-          <img src="img/hotel-view-1.jpg" alt="" class="slider__img">
-          <div class="slider__buttons-bar">
-            <button class="slider__buttons slider__button-prev">
-              <svg
-                class="slider__button-prev-icon icon-arrows slider__icon-arrows"
-                width="10"
-                height="18"
-              >
-                <use href="img/icons.svg#arrow"></use>
-              </svg>
-            </button>
-            <button class="slider__buttons slider__button-next">
-              <svg
-                class="slider__button-next-icon icon-arrows slider__icon-arrows"
-                width="10"
-                height="18"
-              >
-                <use href="img/icons.svg#arrow"></use>
-              </svg>
-            </button>
-          </div>
-          <!-- /.slider__buttons-bar -->
+            <div class="slider__wrapper">
+              <!-- Кнопки управления -->
+              <div class="slider__buttons-bar">
+                <button class="slider__buttons button-prev slider__button-prev">
+                  <svg
+                    class="slider__button-icon-prev slider__icon-arrows"
+                    width="10"
+                    height="18"
+                  >
+                    <use href="img/icons.svg#arrow"></use>
+                  </svg>
+                </button>
+                <button class="slider__buttons button-next slider__button-next">
+                  <svg
+                    class="slider__button-icon-next slider__icon-arrows"
+                    width="10"
+                    height="18"
+                  >
+                    <use href="img/icons.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+              <!-- /.slider__buttons-bar -->
+              <div class="slide slider__slide displayed">
+                <img src="img/hotel-view-1.jpg" alt="" class="slider__img">
+              </div>
+              <!-- /.slide -->
+              <div class="slide slider__slide next">
+                <img src="img/hotel-view-2.jpg" alt="" class="slider__img">
+              </div>
+              <!-- /.slide -->
+              <div class="slide slider__slide">
+                <img src="img/hotel-view-3.jpg" alt="" class="slider__img">
+              </div>
+              <!-- /.slide -->
+              <div class="slide slider__slide">
+                <img src="img/hotel-view-4.jpg" alt="" class="slider__img">
+              </div>
+              <!-- /.slide -->
+              <div class="slide slider__slide prev">
+                <img src="img/hotel-view-5.jpg" alt="" class="slider__img">
+              </div>
+              <!-- /.slide -->
+            </div>
+            <!-- /.slider__wrapper -->
           </div>
           <!-- /.info__slider -->
           <div class="info__additional-container">
