@@ -16,7 +16,6 @@ body {
 
 img {
   max-width: 100%;
-  min-height: 100%;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1253,8 +1252,8 @@ template {
   .info__map-cover {
     width: 100%;
   }
-  .slider__buttons-bar {
-    padding: 28.775% 16px;
+  .slider__wrapper {
+    height: 56vw;
   }
   .slider__buttons {
     padding: 2.49px 3.82px;
