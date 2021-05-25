@@ -1159,7 +1159,7 @@ template {
 @media (max-width: 767px) {
   .container, .mailing__container {
     max-width: 596px;
-    width: 88%;
+    width: 92%;
   }
   .navbar__search, .navbar-menu, .navbar__user {
     display: none;
@@ -1231,8 +1231,10 @@ template {
   .info__user-ratings {
     display: none;
   }
+  .info__main-container {
+    padding-top: 18px;
+  }
   .info__slider {
-    margin-top: 18px;
     margin-bottom: 20px;
   }
   .info__additional-container {

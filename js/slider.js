@@ -3,44 +3,52 @@ const btnPrev = document.querySelector('.button-prev');
 const btnNext = document.querySelector('.button-next');
 // Получаем список слайдов
 const slidesList = document.querySelectorAll('.slide');
-console.log('slidesList: ', slidesList);
 // Создаем index активные слайдов и присваем им стартовое значение
-var indexDisplayed = 0;
-var indexPrev = slidesList.length-1;
-var indexNext = 1;
-// Создаем переменные для вычисления index следюющего поллжения слайдов
-var indexNewDisplayed;
-var indexNewPrev;
-var indexNewNext;
+var activeSlideIndex = {
+  current: {
+    prev: slidesList.length-1,
+    displayed: 0,
+    next: 1
+  },
+  new: {
+    prev: 0,
+    displayed: 0,
+    next: 0
+  }
+};
+// Инициализация слайдера scroll
+const initializeScroll = () => {
+  slidesList[activeSlideIndex.current.prev].classList.add('prev')
+  slidesList[activeSlideIndex.current.displayed].classList.add('displayed')
+  slidesList[activeSlideIndex.current.next].classList.add('next')
+};
+
+initializeScroll();
 
 const scrollLeft = () => {
 
   slidesList.forEach((slide, index) => {
     if (slide.classList.contains('displayed')) {
       
-      indexNewDisplayed = index - 1;
-      indexNewNext = index;
-      indexNewPrev = index - 2;
-    
-      if (indexNewDisplayed < 0) indexNewDisplayed = slidesList.length-1;
-      if (indexNewPrev < 0) indexNewPrev = slidesList.length + indexNewPrev; 
+      activeSlideIndex.new.prev = index - 2;
+      activeSlideIndex.new.displayed = index - 1;
+      activeSlideIndex.new.next = index;
+      
+      if (activeSlideIndex.new.displayed < 0) activeSlideIndex.new.displayed = slidesList.length-1;
+      if (activeSlideIndex.new.prev < 0) activeSlideIndex.new.prev = slidesList.length + activeSlideIndex.new.prev; 
     }
   });
 
-  // console.log('prev: ',indexPrev, ' -> ', indexNewPrev );  
-  // console.log('displated: ', indexDisplayed, ' -> ', indexNewDisplayed);
-  // console.log('next: ' ,indexNext, ' -> ', indexNewNext);
-
-  slidesList[indexNewDisplayed].classList.add('displayed')
-  slidesList[indexNewNext].classList.add('next')
-  slidesList[indexNewPrev].classList.add('prev')
-  slidesList[indexDisplayed].classList.remove('displayed')
-  slidesList[indexNext].classList.remove('next')
-  slidesList[indexPrev].classList.remove('prev')
-
-  indexDisplayed = indexNewDisplayed;
-  indexPrev = indexNewPrev;
-  indexNext = indexNewNext;
+  slidesList[activeSlideIndex.new.prev].classList.add('prev')
+  slidesList[activeSlideIndex.new.displayed].classList.add('displayed')
+  slidesList[activeSlideIndex.new.next].classList.add('next')
+  slidesList[activeSlideIndex.current.prev].classList.remove('prev')
+  slidesList[activeSlideIndex.current.displayed].classList.remove('displayed')
+  slidesList[activeSlideIndex.current.next].classList.remove('next')
+  
+  activeSlideIndex.current.prev = activeSlideIndex.new.prev;
+  activeSlideIndex.current.displayed = activeSlideIndex.new.displayed;
+  activeSlideIndex.current.next = activeSlideIndex.new.next;
 };
 
 const scrollRight = () => {
@@ -48,29 +56,25 @@ const scrollRight = () => {
   slidesList.forEach((slide, index) => {
     if (slide.classList.contains('displayed')) {
       
-      indexNewDisplayed = index + 1;
-      indexNewNext = index + 2;
-      indexNewPrev = index;
+      activeSlideIndex.new.prev = index;
+      activeSlideIndex.new.displayed = index + 1;
+      activeSlideIndex.new.next = index + 2;
 
-      if (indexNewDisplayed > slidesList.length-1) indexNewDisplayed = 0;
-      if (indexNewNext > slidesList.length-1) indexNewNext = indexNewNext - slidesList.length; 
+      if (activeSlideIndex.new.displayed > slidesList.length-1) activeSlideIndex.new.displayed = 0;
+      if (activeSlideIndex.new.next > slidesList.length-1) activeSlideIndex.new.next = activeSlideIndex.new.next - slidesList.length; 
     }
   });
+
+  slidesList[activeSlideIndex.new.prev].classList.add('prev');
+  slidesList[activeSlideIndex.new.displayed].classList.add('displayed');
+  slidesList[activeSlideIndex.new.next].classList.add('next');
+  slidesList[activeSlideIndex.current.prev].classList.remove('prev');
+  slidesList[activeSlideIndex.current.displayed].classList.remove('displayed');
+  slidesList[activeSlideIndex.current.next].classList.remove('next');
   
-  // console.log('prev: ',indexPrev, ' -> ', indexNewPrev );  
-  // console.log('displated: ', indexDisplayed, ' -> ', indexNewDisplayed);
-  // console.log('next: ' ,indexNext, ' -> ', indexNewNext);
-
-  slidesList[indexNewDisplayed].classList.add('displayed')
-  slidesList[indexNewNext].classList.add('next')
-  slidesList[indexNewPrev].classList.add('prev')
-  slidesList[indexDisplayed].classList.remove('displayed')
-  slidesList[indexNext].classList.remove('next')
-  slidesList[indexPrev].classList.remove('prev')
-
-  indexDisplayed = indexNewDisplayed;
-  indexPrev = indexNewPrev;
-  indexNext = indexNewNext;
+  activeSlideIndex.current.prev = activeSlideIndex.new.prev;
+  activeSlideIndex.current.displayed = activeSlideIndex.new.displayed;
+  activeSlideIndex.current.next = activeSlideIndex.new.next;
 };
 
 btnPrev.addEventListener('click', scrollLeft)
@@ -83,6 +87,7 @@ document.addEventListener('keydown', (event) => {
     const sliderTop = sliderPosition.top;
     const sliderHeight = sliderPosition.height;
     const windowHeight = window.innerHeight;
+    
     if ((sliderTop >= 0) && (windowHeight-sliderTop >= sliderHeight)) {
       if (event.code == 'ArrowRight') scrollRight();
       if (event.code == 'ArrowLeft') scrollLeft();
