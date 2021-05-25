@@ -38,6 +38,11 @@
     fill: inherit
   &__button-icon-next
     transform: rotate(180deg)
+  &__img
+    display: block
+    height: 100%
+    width: 100%
+    object-fit: cover
 .slide
   display: none
   position: absolute
@@ -47,13 +52,9 @@
   left: 0
   z-index: -2
   transition: all 0.5s ease 0s
-  &__img
-    display: block
-    width: 100%
-    height: 100%
-    object-fit: cover
   &.displayed
     display: block
+    left: 0
   &.next
     display: block
     left: 100%

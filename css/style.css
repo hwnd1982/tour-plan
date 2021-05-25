@@ -856,6 +856,14 @@ template {
           transform: rotate(180deg);
 }
 
+.slider__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .slide {
   display: none;
   position: absolute;
@@ -868,16 +876,9 @@ template {
   transition: all 0.5s ease 0s;
 }
 
-.slide__img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .slide.displayed {
   display: block;
+  left: 0;
 }
 
 .slide.next {
@@ -1159,7 +1160,7 @@ template {
 @media (max-width: 767px) {
   .container, .mailing__container {
     max-width: 596px;
-    width: 92%;
+    width: 87.5%;
   }
   .navbar__search, .navbar-menu, .navbar__user {
     display: none;
