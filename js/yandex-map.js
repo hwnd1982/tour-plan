@@ -1,7 +1,7 @@
     ymaps.ready(init);
     function init(){
         // Создание карты.
-        var myMap = new ymaps.Map("map", {
+        var myMap = new ymaps.Map("yandex-map", {
             // Координаты центра карты.
             // Порядок по умолчанию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
@@ -10,12 +10,12 @@
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
             zoom: 15,
-            controls:['fullscreenControl','zoomControl']
+            controls: ['zoomControl']
         });
-        var glyphIcon2 = new ymaps.Placemark([7.8382, 98.2988], {}, {
+        var hilton = new ymaps.Placemark([7.8382, 98.2988], {}, {
           preset: 'islands#glyphCircleIcon', 
           iconGlyph: 'home',
           iconGlyphColor: 'blue',
         }); 
-        myMap.geoObjects.add(glyphIcon2);
+        myMap.geoObjects.add(hilton);
     }
