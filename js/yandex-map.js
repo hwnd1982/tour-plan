@@ -6,16 +6,10 @@
             // Порядок по умолчанию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
             // воспользуйтесь инструментом Определение координат.
-            center: [7.83845, 98.29922],
+            center: [7.838196, 98.298813],
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
             zoom: 15,
             controls: ['zoomControl']
         });
-        var hilton = new ymaps.Placemark([7.8382, 98.2988], {}, {
-          preset: 'islands#glyphCircleIcon', 
-          iconGlyph: 'home',
-          iconGlyphColor: 'blue',
-        }); 
-        myMap.geoObjects.add(hilton);
     }
