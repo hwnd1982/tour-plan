@@ -1088,7 +1088,7 @@ template {
 }
 
 @media (max-width: 992px) {
-  .container, .mailing__container {
+  .container {
     max-width: 700px;
   }
   .logo {
@@ -1170,7 +1170,7 @@ template {
 }
 
 @media (max-width: 767px) {
-  .container, .mailing__container {
+  .container {
     max-width: 596px;
     width: 87.5%;
   }
@@ -1262,10 +1262,8 @@ template {
     margin-bottom: 20px;
   }
   .info__map {
+    height: 172.94px;
     max-width: 100%;
-  }
-  .info__map-cover {
-    width: 100%;
   }
   .hotel-slider__wrapper {
     height: 56vw;
