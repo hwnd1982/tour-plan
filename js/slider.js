@@ -1,12 +1,12 @@
 // Получаем кнопки
-const btnPrev = document.querySelector('.button-prev');
-const btnNext = document.querySelector('.button-next');
+const btnPrev = document.querySelector('.hotel-button-prev');
+const btnNext = document.querySelector('.hotel-button-next');
 // Получаем список слайдов
-const slidesList = document.querySelectorAll('.slide');
+const hotelSlidesList = document.querySelectorAll('.hotel-slide');
 // Создаем index активные слайдов и присваем им стартовое значение
-var activeSlideIndex = {
+var activeHotelSlideIndex = {
   current: {
-    prev: slidesList.length-1,
+    prev: hotelSlidesList.length-1,
     displayed: 0,
     next: 1
   },
@@ -17,15 +17,15 @@ var activeSlideIndex = {
   }
 };
 // Инициализация слайдера scroll
-const initializeScroll = () => {
+const initializeScroll = (activeSlideIndex, slidesList) => {
   slidesList[activeSlideIndex.current.prev].classList.add('prev')
   slidesList[activeSlideIndex.current.displayed].classList.add('displayed')
   slidesList[activeSlideIndex.current.next].classList.add('next')
 };
 
-initializeScroll();
+initializeScroll(activeHotelSlideIndex, hotelSlidesList);
 
-const scrollLeft = () => {
+const scrollLeft = (activeSlideIndex, slidesList) => {
 
   slidesList.forEach((slide, index) => {
     if (slide.classList.contains('displayed')) {
@@ -51,7 +51,7 @@ const scrollLeft = () => {
   activeSlideIndex.current.next = activeSlideIndex.new.next;
 };
 
-const scrollRight = () => {
+const scrollRight = (activeSlideIndex, slidesList) => {
   
   slidesList.forEach((slide, index) => {
     if (slide.classList.contains('displayed')) {
@@ -77,20 +77,24 @@ const scrollRight = () => {
   activeSlideIndex.current.next = activeSlideIndex.new.next;
 };
 
-btnPrev.addEventListener('click', scrollLeft)
-btnNext.addEventListener('click', scrollRight)
+btnPrev.addEventListener('click', () => {
+  scrollLeft(activeHotelSlideIndex, hotelSlidesList)
+});
+btnNext.addEventListener('click', () => {
+  scrollRight(activeHotelSlideIndex, hotelSlidesList)
+});
 
 document.addEventListener('keydown', (event) => {
   if ((event.code == 'ArrowRight') || (event.code == 'ArrowLeft')) {
-    const sliderPosition = document.querySelector('.slider').getBoundingClientRect();
+    const sliderPosition = document.querySelector('.hotel-slider').getBoundingClientRect();
 
     const sliderTop = sliderPosition.top;
     const sliderHeight = sliderPosition.height;
     const windowHeight = window.innerHeight;
     
     if ((sliderTop >= 0) && (windowHeight-sliderTop >= sliderHeight)) {
-      if (event.code == 'ArrowRight') scrollRight();
-      if (event.code == 'ArrowLeft') scrollLeft();
+      if (event.code == 'ArrowRight') scrollRight(activeHotelSlideIndex, hotelSlidesList);
+      if (event.code == 'ArrowLeft') scrollLeft(activeHotelSlideIndex, hotelSlidesList);
     }
   }
 });

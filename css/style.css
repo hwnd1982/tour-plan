@@ -641,7 +641,7 @@ template {
   display: flex;
 }
 
-.info__slider {
+.info__hotel-slider {
   width: 100%;
   margin-right: 30px;
 }
@@ -793,19 +793,19 @@ template {
   line-height: 19px;
 }
 
-.slider {
+.hotel-slider {
   display: block;
   width: 728px;
 }
 
-.slider__wrapper {
+.hotel-slider__wrapper {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   height: 450px;
 }
 
-.slider__wrapper:after {
+.hotel-slider__wrapper:after {
   position: absolute;
   content: '';
   top: 0;
@@ -819,7 +819,7 @@ template {
   z-index: -1;
 }
 
-.slider__buttons-bar {
+.hotel-slider__buttons-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -834,7 +834,7 @@ template {
           transform: translate(0, -50%);
 }
 
-.slider__buttons {
+.hotel-slider__buttons {
   padding: 6px 10px;
   background: none;
   border: none;
@@ -843,20 +843,20 @@ template {
   cursor: pointer;
 }
 
-.slider__buttons:hover {
+.hotel-slider__buttons:hover {
   fill: white;
 }
 
-.slider__icon-arrows {
+.hotel-slider__icon-arrows {
   fill: inherit;
 }
 
-.slider__button-icon-next {
+.hotel-slider__button-icon-next {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.slider__img {
+.hotel-slider__img {
   display: block;
   height: 100%;
   width: 100%;
@@ -864,7 +864,7 @@ template {
      object-fit: cover;
 }
 
-.slide {
+.hotel-slide {
   display: none;
   position: absolute;
   width: 100%;
@@ -876,17 +876,17 @@ template {
   transition: all 0.5s ease 0s;
 }
 
-.slide.displayed {
+.hotel-slide.displayed {
   display: block;
   left: 0;
 }
 
-.slide.next {
+.hotel-slide.next {
   display: block;
   left: 100%;
 }
 
-.slide.prev {
+.hotel-slide.prev {
   display: block;
   left: -100%;
 }
@@ -1121,7 +1121,7 @@ template {
     max-width: 340px;
     margin-bottom: 0;
   }
-  .info__slider {
+  .info__hotel-slider {
     width: 100%;
     margin-right: 0;
     margin-bottom: 30px;
@@ -1235,7 +1235,7 @@ template {
   .info__main-container {
     padding-top: 18px;
   }
-  .info__slider {
+  .info__hotel-slider {
     margin-bottom: 20px;
   }
   .info__additional-container {
@@ -1255,14 +1255,14 @@ template {
   .info__map-cover {
     width: 100%;
   }
-  .slider__wrapper {
+  .hotel-slider__wrapper {
     height: 56vw;
   }
-  .slider__buttons {
+  .hotel-slider__buttons {
     padding: 2.49px 3.82px;
     line-height: 0.8;
   }
-  .slider__icon-arrows {
+  .hotel-slider__icon-arrows {
     width: 12px;
     height: 12px;
   }
