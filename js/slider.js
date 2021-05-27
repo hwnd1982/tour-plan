@@ -1,6 +1,6 @@
 // Получаем кнопки
-const btnPrev = document.querySelector('.hotel-button-prev');
-const btnNext = document.querySelector('.hotel-button-next');
+const btnHotelPrev = document.querySelector('.hotel-button-prev');
+const btnHotelNext = document.querySelector('.hotel-button-next');
 // Получаем список слайдов
 const hotelSlidesList = document.querySelectorAll('.hotel-slide');
 // Создаем index активные слайдов и присваем им стартовое значение
@@ -25,6 +25,19 @@ const initializeScroll = (activeSlideIndex, slidesList) => {
 
 initializeScroll(activeHotelSlideIndex, hotelSlidesList);
 
+const slideScroll = (activeSlideIndex, slidesList) => {
+  slidesList[activeSlideIndex.new.prev].classList.add('prev');
+  slidesList[activeSlideIndex.new.displayed].classList.add('displayed');
+  slidesList[activeSlideIndex.new.next].classList.add('next');
+  slidesList[activeSlideIndex.current.prev].classList.remove('prev');
+  slidesList[activeSlideIndex.current.displayed].classList.remove('displayed');
+  slidesList[activeSlideIndex.current.next].classList.remove('next');
+
+  activeSlideIndex.current.prev = activeSlideIndex.new.prev;
+  activeSlideIndex.current.displayed = activeSlideIndex.new.displayed;
+  activeSlideIndex.current.next = activeSlideIndex.new.next;
+}
+
 const scrollLeft = (activeSlideIndex, slidesList) => {
 
   slidesList.forEach((slide, index) => {
@@ -39,16 +52,8 @@ const scrollLeft = (activeSlideIndex, slidesList) => {
     }
   });
 
-  slidesList[activeSlideIndex.new.prev].classList.add('prev')
-  slidesList[activeSlideIndex.new.displayed].classList.add('displayed')
-  slidesList[activeSlideIndex.new.next].classList.add('next')
-  slidesList[activeSlideIndex.current.prev].classList.remove('prev')
-  slidesList[activeSlideIndex.current.displayed].classList.remove('displayed')
-  slidesList[activeSlideIndex.current.next].classList.remove('next')
-  
-  activeSlideIndex.current.prev = activeSlideIndex.new.prev;
-  activeSlideIndex.current.displayed = activeSlideIndex.new.displayed;
-  activeSlideIndex.current.next = activeSlideIndex.new.next;
+  slideScroll(activeSlideIndex, slidesList);
+
 };
 
 const scrollRight = (activeSlideIndex, slidesList) => {
@@ -65,36 +70,32 @@ const scrollRight = (activeSlideIndex, slidesList) => {
     }
   });
 
-  slidesList[activeSlideIndex.new.prev].classList.add('prev');
-  slidesList[activeSlideIndex.new.displayed].classList.add('displayed');
-  slidesList[activeSlideIndex.new.next].classList.add('next');
-  slidesList[activeSlideIndex.current.prev].classList.remove('prev');
-  slidesList[activeSlideIndex.current.displayed].classList.remove('displayed');
-  slidesList[activeSlideIndex.current.next].classList.remove('next');
-  
-  activeSlideIndex.current.prev = activeSlideIndex.new.prev;
-  activeSlideIndex.current.displayed = activeSlideIndex.new.displayed;
-  activeSlideIndex.current.next = activeSlideIndex.new.next;
+  slideScroll(activeSlideIndex, slidesList);
+
 };
 
-btnPrev.addEventListener('click', () => {
-  scrollLeft(activeHotelSlideIndex, hotelSlidesList)
+btnHotelPrev.addEventListener('click', () => {
+  scrollLeft(activeHotelSlideIndex, hotelSlidesList); 
 });
-btnNext.addEventListener('click', () => {
-  scrollRight(activeHotelSlideIndex, hotelSlidesList)
+btnHotelNext.addEventListener('click', () => {
+  scrollRight(activeHotelSlideIndex, hotelSlidesList);
 });
 
 document.addEventListener('keydown', (event) => {
   if ((event.code == 'ArrowRight') || (event.code == 'ArrowLeft')) {
-    const sliderPosition = document.querySelector('.hotel-slider').getBoundingClientRect();
+    const hotelSliderPosition = document.querySelector('.hotel-slider').getBoundingClientRect();
 
-    const sliderTop = sliderPosition.top;
-    const sliderHeight = sliderPosition.height;
-    const windowHeight = window.innerHeight;
+    const hotelSliderTop = hotelSliderPosition.top;
+    const hotelSliderHeight = hotelSliderPosition.height;
+  
     
-    if ((sliderTop >= 0) && (windowHeight-sliderTop >= sliderHeight)) {
-      if (event.code == 'ArrowRight') scrollRight(activeHotelSlideIndex, hotelSlidesList);
-      if (event.code == 'ArrowLeft') scrollLeft(activeHotelSlideIndex, hotelSlidesList);
+    if ((hotelSliderTop >= 0) && (window.innerHeight-hotelSliderTop >= hotelSliderHeight)) {
+      if (event.code == 'ArrowRight') {
+        scrollRight(activeHotelSlideIndex, hotelSlidesList);
+      }
+      if (event.code == 'ArrowLeft') {
+        scrollLeft(activeHotelSlideIndex, hotelSlidesList);
+      }
     }
   }
 });
