@@ -269,34 +269,33 @@
   </section>
   <!-- Отзывы -->
   <section class="reveiw">
-    <div class="container">
+    <div class="container reveiw__container">
       <h2 class="reveiw__title">What people think about us</h2>
-        <div class="review__slider review-slider">
-          <div class="review-slider-switches">
-            <div class="button-prev">
-              <svg
-                class="icon review-arrows arrow-left"
-                width="10"
-                height="17.5"
-              >
+        
+      <div class="review__slider review-slider">
+        <div class="review-slider__wrapper">
+          <!-- Кнопки управления -->
+          <div class="review-slider__buttons-bar">
+            <button class="review-slider__buttons hotel-button-prev review-slider__button-prev">
+              <svg class="review-slider__button-icon-prev review-slider__icon-arrows" width="10" height="18">
                 <use href="img/icons.svg#arrow"></use>
               </svg>
-            </div>
-            <!-- /.button-prev -->
-            <div class="button-next">
-              <svg
-                class="icon review-arrows arrow-right"
-                width="10"
-                height="17.5"
-              >
+            </button>
+            <button class="review-slider__buttons hotel-button-next review-slider__button-next">
+              <svg class="review-slider__button-icon-next review-slider__icon-arrows" width="10" height="18">
                 <use href="img/icons.svg#arrow"></use>
               </svg>
-            </div>
-            <!-- /.button-next -->
+            </button>
           </div>
-          <!-- /.review-slider-switches -->
-          <div class="review-slide">
-            <div class="review-wrapper-card">
+          <!-- /.review-slider__buttons-bar -->
+          <div class="review-slide review-slider__slide">
+            
+          </div>
+          <!-- /.slide -->
+        </div>
+        <!-- /.review-slider__wrapper -->
+          <div class="review-slider__slide review-slide">
+            
               <div class="review-card">
                 <div class="profile-card">
                   <div class="profile-avatar">
@@ -307,9 +306,9 @@
                     >
                   </div>
                   <!-- /.profile-avatar -->
-                  <span class="review-autor">Megan Fox</span>
-                  <span class="review-date">Stayed 18 Nov, 2019</span>
-                  <div class="review-stars">
+                  <span class="review-slide__name">Megan Fox</span>
+                  <span class="review__date">Stayed 18 Nov, 2019</span>
+                  <div class="review__rating">
                     <svg
                       class="icon icon-star"
                       width="8"
@@ -381,8 +380,7 @@
                 </p>
               </div>
               <!-- /.review-card -->
-            </div>
-            <!-- /.review-wrapper-card -->
+            
           </div>
           <!-- /.review-slide -->
         </div>
