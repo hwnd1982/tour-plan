@@ -906,7 +906,6 @@ template {
 .review__container {
   position: relative;
   padding-top: 40px;
-  padding-bottom: 70px;
   height: 550px;
 }
 
@@ -1129,7 +1128,9 @@ template {
   background-blend-mode: multiply;
   background-image: url(../img/newsletter-bg.jpg);
   background-color: rgba(10, 34, 61, 0.8);
-  background-size: cover;
+  background-size: 100% auto;
+  background-position-x: center;
+  background-position-y: 100%;
 }
 
 .mailing__container {
@@ -1306,6 +1307,9 @@ template {
   .container {
     max-width: 960px;
   }
+  .mailing {
+    background-size: 190% auto;
+  }
   .review__container {
     height: 532px;
   }
@@ -1313,10 +1317,14 @@ template {
     font-size: 30px;
     line-height: 38px;
   }
+  .review-slider__buttons-bar {
+    top: 207px;
+  }
   .review-slider__wrapper {
     width: 579px;
   }
   .review-slide {
+    top: 95px;
     max-height: 299px;
     padding-left: 60px;
     padding-right: 64px;
@@ -1332,6 +1340,9 @@ template {
 @media (max-width: 992px) {
   .container {
     max-width: 700px;
+  }
+  .mailing {
+    background-size: 250% auto;
   }
   .logo {
     width: 132px;
@@ -1518,6 +1529,9 @@ template {
     width: 12px;
     height: 12px;
   }
+  .mailing {
+    background-size: 533% auto;
+  }
   .mailing__container {
     max-width: 556px;
     -webkit-box-orient: vertical;
@@ -1553,16 +1567,27 @@ template {
     height: 661px;
   }
   .review__title {
+    width: 87.5%;
+    margin: auto;
     font-size: 18px;
     line-height: 23px;
   }
   .review-slider__wrapper {
     width: 100%;
   }
+  .review-slider__buttons-bar {
+    top: 72px;
+    padding: 0;
+    width: 210px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
   .review-slide {
+    top: 87px;
     max-height: 438px;
-    padding-left: 60px;
-    padding-right: 64px;
+    padding-left: 33px;
+    padding-right: 29px;
   }
   .review-slide__reviwe-card {
     max-height: 266px;
@@ -1607,6 +1632,9 @@ template {
 }
 
 @media (max-width: 576px) {
+  .mailing {
+    background-size: 700% auto;
+  }
   .logo {
     line-height: 14px;
     width: 99px;
