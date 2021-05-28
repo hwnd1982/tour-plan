@@ -918,13 +918,17 @@ template {
   text-transform: uppercase;
 }
 
+.review__slider {
+  margin-top: 70px;
+}
+
 .review-slider {
   position: relative;
 }
 
 .review-slider__wrapper {
   max-width: 731px;
-  height: 395px;
+  height: 325px;
   margin: auto;
   -webkit-perspective-origin: center center;
           perspective-origin: center center;
@@ -974,9 +978,9 @@ template {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  width: 731px;
+  width: 100%;
   height: 280px;
-  padding: 12.8px 95px 29.96px 99px;
+  padding: 136px 95px 30px 99px;
   background: #FFFFFF;
   border-radius: 8px;
   display: none;
@@ -984,12 +988,11 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   z-index: -5;
-  -webkit-transition: all 0.5s ease-out 0s;
-  transition: all 0.5s ease-out 0s;
+  -webkit-transition: -webkit-transform 0.5s ease-out 0s;
+  transition: -webkit-transform 0.5s ease-out 0s;
+  transition: transform 0.5s ease-out 0s;
+  transition: transform 0.5s ease-out 0s, -webkit-transform 0.5s ease-out 0s;
 }
 
 .review-slide__quotes {
@@ -1006,12 +1009,13 @@ template {
 .review-slide__icon-quotes {
   position: absolute;
   fill: #f2f2f2;
+  opacity: 0.4;
 }
 
 .review-slide__reviwe-card {
   overflow: auto;
-  width: 537px;
-  height: 114px;
+  width: 100%;
+  height: 100%;
   overflow-style: none;
   scrollbar-width: none;
 }
@@ -1034,8 +1038,10 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 0.5s ease-out 0.5s;
-  transition: all 0.5s ease-out 0.5s;
+  -webkit-transition: -webkit-transform 0.5s ease-out 0.5s;
+  transition: -webkit-transform 0.5s ease-out 0.5s;
+  transition: transform 0.5s ease-out 0.5s;
+  transition: transform 0.5s ease-out 0.5s, -webkit-transform 0.5s ease-out 0.5s;
   z-index: -2;
 }
 
@@ -1306,6 +1312,25 @@ template {
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
+  }
+  .review__title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .review__slider {
+    margin-top: 50px;
+  }
+  .review-slider__wrapper {
+    width: 579px;
+    height: 394px;
+  }
+  .review-slide {
+    height: 299px;
+    padding-left: 60px;
+    padding-right: 64px;
+  }
+  .review-slide__quotes {
+    display: none;
   }
 }
 

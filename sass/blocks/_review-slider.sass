@@ -2,7 +2,7 @@
   position: relative
   &__wrapper
     max-width: 731px
-    height: 395px
+    height: 325px
     margin: auto
     perspective-origin: center center
     perspective: 90vw
@@ -32,16 +32,16 @@
   bottom: 0
   left: 50%
   transform: translate(-50%, 0)
-  width: 731px
+  width: 100%
   height: 280px
-  padding: 12.8px 95px 29.96px 99px
+  padding: 136px 95px 30px 99px
   background: #FFFFFF
   border-radius: 8px
   display: none
   flex-direction: column
-  justify-content: flex-end
+  // justify-content: flex-end
   z-index: -5
-  transition: all 0.5s ease-out 0s
+  transition: transform 0.5s ease-out 0s
   &__quotes
     position: absolute
     width: 607px
@@ -53,12 +53,12 @@
   &__icon-quotes
     position: absolute
     fill: #f2f2f2
-    // opacity: 0.4
+    opacity: 0.4
     // fill: #000000
   &__reviwe-card
     overflow: auto
-    width: 537px
-    height: 114px
+    width: 100%
+    height: 100%
     overflow-style: none
     scrollbar-width: none
     &::-webkit-scrollbar
@@ -73,7 +73,7 @@
     text-align: justify
   &.displayed
     display: flex
-    transition: all 0.5s ease-out 0.5s
+    transition: transform 0.5s ease-out 0.5s
     z-index: -2
   &.next
     display: flex
