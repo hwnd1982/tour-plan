@@ -1,0 +1,128 @@
+.review-slider
+  position: relative
+  &__wrapper
+    max-width: 731px
+    height: 395px
+    margin: auto
+    perspective-origin: center center
+    perspective: 90vw
+  &__buttons-bar
+    position: absolute
+    bottom: 161px
+    display: flex
+    padding: 0 16px
+    width: 100%
+    justify-content: space-between
+    z-index: 10
+  &__buttons
+    padding: 6px 10px
+    background: none
+    border: none
+    line-height: 0.8
+    fill: #828282
+    cursor: pointer
+    &:hover
+      fill: darken(#828282, 10%)
+  &__icon-arrows
+    fill: inherit
+  &__button-icon-next
+    transform: rotate(180deg)
+.review-slide
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translate(-50%, 0)
+  width: 731px
+  height: 280px
+  padding: 12.8px 95px 29.96px 99px
+  background: #FFFFFF
+  border-radius: 8px
+  display: none
+  flex-direction: column
+  justify-content: flex-end
+  z-index: -5
+  transition: all 0.5s ease-out 0s
+  &__quotes
+    position: absolute
+    width: 607px
+    top: 12.8px
+    height: 153.49px
+    left: 50%
+    transform: translate(-50%, 0)
+    z-index: -1
+  &__icon-quotes
+    position: absolute
+    fill: #f2f2f2
+    // opacity: 0.4
+    // fill: #000000
+  &__reviwe-card
+    overflow: auto
+    width: 537px
+    height: 114px
+    overflow-style: none
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      width: 0px
+      background: transparent
+  &__text
+    margin: 0
+    z-index: 5
+    font-size: 12px
+    line-height: 160%
+    /* or 19px */
+    text-align: justify
+  &.displayed
+    display: flex
+    transition: all 0.5s ease-out 0.5s
+    z-index: -2
+  &.next
+    display: flex
+    transform: translate(-50%, 0) rotateY(-90deg)
+    // left: 100%
+    z-index: -5
+  &.prev
+    display: flex
+    transform: translate(-50%, 0) rotateY(90deg)
+    z-index: -5
+    // left: -100%
+.quotes-open
+  top: 0
+  left: 0
+.quotes-close
+  bottom: 0
+  right: 0
+  transform: rotate(180deg)
+.author-card
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: absolute
+  top: -45px
+  left: 50%
+  transform: translate(-50%, 0)
+  &__avatar
+    margin-bottom: 9px
+    object-fit: cover
+    width: 90px
+    height: 90px
+    border-radius: 50%
+  &__author-name
+    margin-bottom: 10px
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: $primery
+  &__review-date
+    margin-bottom: 4px
+    font-size: 10px
+    line-height: 13px
+    color: #000000
+  &__review-rating
+    margin-bottom: 4px
+    font-size: 8px
+    line-height: 6px
+    flex-basis: 100%
+.icon-star
+  font-size: 8px
+  line-height: 8px
+  fill: #f2994a

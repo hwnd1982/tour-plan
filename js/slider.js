@@ -16,6 +16,26 @@ var activeHotelSlideIndex = {
     next: 0
   }
 };
+
+// Получаем кнопки
+const btnReviewPrev = document.querySelector('.review-button-prev');
+const btnReviewNext = document.querySelector('.review-button-next');
+// Получаем список слайдов
+const reviewSlidesList = document.querySelectorAll('.review-slide');
+// Создаем index активные слайдов и присваем им стартовое значение
+var activeReviewSlideIndex = {
+  current: {
+    prev: reviewSlidesList.length-1,
+    displayed: 0,
+    next: 1
+  },
+  new: {
+    prev: 0,
+    displayed: 0,
+    next: 0
+  }
+};
+
 // Инициализация слайдера scroll
 const initializeScroll = (activeSlideIndex, slidesList) => {
   slidesList[activeSlideIndex.current.prev].classList.add('prev')
@@ -24,6 +44,7 @@ const initializeScroll = (activeSlideIndex, slidesList) => {
 };
 
 initializeScroll(activeHotelSlideIndex, hotelSlidesList);
+initializeScroll(activeReviewSlideIndex, reviewSlidesList);
 
 const slideScroll = (activeSlideIndex, slidesList) => {
   slidesList[activeSlideIndex.new.prev].classList.add('prev');
@@ -81,6 +102,15 @@ btnHotelNext.addEventListener('click', () => {
   scrollRight(activeHotelSlideIndex, hotelSlidesList);
 });
 
+
+btnReviewPrev.addEventListener('click', () => {
+  scrollLeft(activeReviewSlideIndex, reviewSlidesList); 
+});
+btnReviewNext.addEventListener('click', () => {
+  scrollRight(activeReviewSlideIndex, reviewSlidesList);
+});
+
+
 document.addEventListener('keydown', (event) => {
   if ((event.code == 'ArrowRight') || (event.code == 'ArrowLeft')) {
     const hotelSliderPosition = document.querySelector('.hotel-slider').getBoundingClientRect();
@@ -95,6 +125,20 @@ document.addEventListener('keydown', (event) => {
       }
       if (event.code == 'ArrowLeft') {
         scrollLeft(activeHotelSlideIndex, hotelSlidesList);
+      }
+    }
+
+    const reviewSliderPosition = document.querySelector('.review-slider').getBoundingClientRect();
+
+    const reviewSliderTop = reviewSliderPosition.top;
+    const reviewSliderHeight = reviewSliderPosition.height;
+
+    if ((reviewSliderTop >= 0) && (window.innerHeight-reviewSliderTop >= reviewSliderHeight)) {
+      if (event.code == 'ArrowRight') {
+        scrollRight(activeReviewSlideIndex, reviewSlidesList);
+      }
+      if (event.code == 'ArrowLeft') {
+        scrollLeft(activeReviewSlideIndex, reviewSlidesList);
       }
     }
   }

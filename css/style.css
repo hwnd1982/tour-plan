@@ -903,6 +903,228 @@ template {
   left: -100%;
 }
 
+.review__container {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+
+.review__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.review-slider {
+  position: relative;
+}
+
+.review-slider__wrapper {
+  max-width: 731px;
+  height: 395px;
+  margin: auto;
+  -webkit-perspective-origin: center center;
+          perspective-origin: center center;
+  -webkit-perspective: 90vw;
+          perspective: 90vw;
+}
+
+.review-slider__buttons-bar {
+  position: absolute;
+  bottom: 161px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 16px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 10;
+}
+
+.review-slider__buttons {
+  padding: 6px 10px;
+  background: none;
+  border: none;
+  line-height: 0.8;
+  fill: #828282;
+  cursor: pointer;
+}
+
+.review-slider__buttons:hover {
+  fill: dimgray;
+}
+
+.review-slider__icon-arrows {
+  fill: inherit;
+}
+
+.review-slider__button-icon-next {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.review-slide {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 731px;
+  height: 280px;
+  padding: 12.8px 95px 29.96px 99px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: -5;
+  -webkit-transition: all 0.5s ease-out 0s;
+  transition: all 0.5s ease-out 0s;
+}
+
+.review-slide__quotes {
+  position: absolute;
+  width: 607px;
+  top: 12.8px;
+  height: 153.49px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: -1;
+}
+
+.review-slide__icon-quotes {
+  position: absolute;
+  fill: #f2f2f2;
+}
+
+.review-slide__reviwe-card {
+  overflow: auto;
+  width: 537px;
+  height: 114px;
+  overflow-style: none;
+  scrollbar-width: none;
+}
+
+.review-slide__reviwe-card::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+.review-slide__text {
+  margin: 0;
+  z-index: 5;
+  font-size: 12px;
+  line-height: 160%;
+  /* or 19px */
+  text-align: justify;
+}
+
+.review-slide.displayed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.5s ease-out 0.5s;
+  transition: all 0.5s ease-out 0.5s;
+  z-index: -2;
+}
+
+.review-slide.next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(-50%, 0) rotateY(-90deg);
+          transform: translate(-50%, 0) rotateY(-90deg);
+  z-index: -5;
+}
+
+.review-slide.prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(-50%, 0) rotateY(90deg);
+          transform: translate(-50%, 0) rotateY(90deg);
+  z-index: -5;
+}
+
+.quotes-open {
+  top: 0;
+  left: 0;
+}
+
+.quotes-close {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.author-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.author-card__avatar {
+  margin-bottom: 9px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.author-card__author-name {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ec1f46;
+}
+
+.author-card__review-date {
+  margin-bottom: 4px;
+  font-size: 10px;
+  line-height: 13px;
+  color: #000000;
+}
+
+.author-card__review-rating {
+  margin-bottom: 4px;
+  font-size: 8px;
+  line-height: 6px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.icon-star {
+  font-size: 8px;
+  line-height: 8px;
+  fill: #f2994a;
+}
+
 .mailing {
   width: 100%;
   background-blend-mode: multiply;
