@@ -907,6 +907,7 @@ template {
   position: relative;
   padding-top: 40px;
   padding-bottom: 70px;
+  height: 550px;
 }
 
 .review__title {
@@ -918,27 +919,24 @@ template {
   text-transform: uppercase;
 }
 
-.review__slider {
-  margin-top: 70px;
-}
-
 .review-slider {
   position: relative;
+  height: 100%;
 }
 
 .review-slider__wrapper {
   max-width: 731px;
-  height: 325px;
+  height: 100%;
   margin: auto;
   -webkit-perspective-origin: center center;
           perspective-origin: center center;
-  -webkit-perspective: 90vw;
-          perspective: 90vw;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
 }
 
 .review-slider__buttons-bar {
   position: absolute;
-  bottom: 161px;
+  top: 204px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -974,13 +972,13 @@ template {
 
 .review-slide {
   position: absolute;
-  bottom: 0;
+  top: 115px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   width: 100%;
-  height: 280px;
-  padding: 136px 95px 30px 99px;
+  max-height: 280px;
+  padding: 0 95px 0 99px;
   background: #FFFFFF;
   border-radius: 8px;
   display: none;
@@ -1012,11 +1010,16 @@ template {
   opacity: 0.4;
 }
 
+.review-slide__author-card {
+  margin-bottom: 32px;
+}
+
 .review-slide__reviwe-card {
+  position: relative;
+  max-height: 114px;
+  top: -45px;
   overflow: auto;
   width: 100%;
-  height: 100%;
-  overflow-style: none;
   scrollbar-width: none;
 }
 
@@ -1035,9 +1038,7 @@ template {
 }
 
 .review-slide.displayed {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-transition: -webkit-transform 0.5s ease-out 0.5s;
   transition: -webkit-transform 0.5s ease-out 0.5s;
   transition: transform 0.5s ease-out 0.5s;
@@ -1046,18 +1047,14 @@ template {
 }
 
 .review-slide.next {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-transform: translate(-50%, 0) rotateY(-90deg);
           transform: translate(-50%, 0) rotateY(-90deg);
   z-index: -5;
 }
 
 .review-slide.prev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-transform: translate(-50%, 0) rotateY(90deg);
           transform: translate(-50%, 0) rotateY(90deg);
   z-index: -5;
@@ -1086,11 +1083,8 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
+  position: relative;
   top: -45px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
 }
 
 .author-card__avatar {
@@ -1118,7 +1112,6 @@ template {
 }
 
 .author-card__review-rating {
-  margin-bottom: 4px;
   font-size: 8px;
   line-height: 6px;
   -ms-flex-preferred-size: 100%;
@@ -1313,24 +1306,26 @@ template {
   .container {
     max-width: 960px;
   }
+  .review__container {
+    height: 532px;
+  }
   .review__title {
     font-size: 30px;
     line-height: 38px;
   }
-  .review__slider {
-    margin-top: 50px;
-  }
   .review-slider__wrapper {
     width: 579px;
-    height: 394px;
   }
   .review-slide {
-    height: 299px;
+    max-height: 299px;
     padding-left: 60px;
     padding-right: 64px;
   }
   .review-slide__quotes {
     display: none;
+  }
+  .review-slide__reviwe-card {
+    max-height: 133px;
   }
 }
 
@@ -1553,6 +1548,24 @@ template {
   }
   .subscribe__input {
     width: inherit;
+  }
+  .review__container {
+    height: 661px;
+  }
+  .review__title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .review-slider__wrapper {
+    width: 100%;
+  }
+  .review-slide {
+    max-height: 438px;
+    padding-left: 60px;
+    padding-right: 64px;
+  }
+  .review-slide__reviwe-card {
+    max-height: 266px;
   }
   .footer-top {
     -webkit-box-orient: vertical;

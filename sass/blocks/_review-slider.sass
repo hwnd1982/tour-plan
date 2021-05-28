@@ -1,14 +1,16 @@
 .review-slider
   position: relative
+  height: 100%
   &__wrapper
     max-width: 731px
-    height: 325px
+    // height: 325px
+    height: 100%
     margin: auto
     perspective-origin: center center
-    perspective: 90vw
+    perspective: 2000px
   &__buttons-bar
     position: absolute
-    bottom: 161px
+    top: 204px
     display: flex
     padding: 0 16px
     width: 100%
@@ -29,12 +31,12 @@
     transform: rotate(180deg)
 .review-slide
   position: absolute
-  bottom: 0
+  top: 115px
   left: 50%
   transform: translate(-50%, 0)
   width: 100%
-  height: 280px
-  padding: 136px 95px 30px 99px
+  max-height: 280px
+  padding: 0 95px 0 99px
   background: #FFFFFF
   border-radius: 8px
   display: none
@@ -55,11 +57,15 @@
     fill: #f2f2f2
     opacity: 0.4
     // fill: #000000
+  &__author-card
+    margin-bottom: 32px
   &__reviwe-card
+    position: relative
+    max-height: 114px
+    top: -45px
     overflow: auto
     width: 100%
-    height: 100%
-    overflow-style: none
+    // overflow-style: none
     scrollbar-width: none
     &::-webkit-scrollbar
       width: 0px
@@ -72,16 +78,16 @@
     /* or 19px */
     text-align: justify
   &.displayed
-    display: flex
+    display: block
     transition: transform 0.5s ease-out 0.5s
     z-index: -2
   &.next
-    display: flex
+    display: block
     transform: translate(-50%, 0) rotateY(-90deg)
     // left: 100%
     z-index: -5
   &.prev
-    display: flex
+    display: block
     transform: translate(-50%, 0) rotateY(90deg)
     z-index: -5
     // left: -100%
@@ -96,10 +102,9 @@
   display: flex
   flex-direction: column
   align-items: center
-  position: absolute
+  position: relative
   top: -45px
-  left: 50%
-  transform: translate(-50%, 0)
+  // transform: translate(-50%, 0)
   &__avatar
     margin-bottom: 9px
     object-fit: cover
@@ -118,7 +123,6 @@
     line-height: 13px
     color: #000000
   &__review-rating
-    margin-bottom: 4px
     font-size: 8px
     line-height: 6px
     flex-basis: 100%

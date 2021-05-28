@@ -2,21 +2,25 @@
   .container
     max-width: 960px
   .review
+    &__container
+      height: 532px
     &__title
       font-size: 30px
       line-height: 38px
     &__slider
-      margin-top: 50px
+      // margin-top: 50px
   .review-slider
     &__wrapper
       width: 579px
-      height: 394px
+      // height: 394px
   .review-slide
-    height: 299px
+    max-height: 299px
     padding-left: 60px
     padding-right: 64px
     &__quotes
       display: none
+    &__reviwe-card
+      max-height: 133px
 @media (max-width: 992px)
   // Блок header
   .container
@@ -173,6 +177,25 @@
     width: 100%
     &__input
       width: inherit
+  //  Блок review
+  .review
+    &__container
+      height: 661px
+    &__title
+      font-size: 18px
+      line-height: 23px
+    &__slider
+      // margin-top: 42px
+  .review-slider
+    &__wrapper
+      width: 100%
+      // height: 438px
+  .review-slide
+    max-height: 438px
+    padding-left: 60px
+    padding-right: 64px
+    &__reviwe-card
+      max-height: 266px
   //  Блок footer
   .footer
     &-top
