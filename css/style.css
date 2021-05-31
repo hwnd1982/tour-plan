@@ -1572,6 +1572,11 @@ template {
     height: 1564px;
     gap: 20px;
   }
+  .other-packages__title {
+    margin-bottom: 45px;
+    font-size: 30px;
+    line-height: 38px;
+  }
   .logo-vertical {
     width: 104px;
   }
@@ -1721,6 +1726,11 @@ template {
         -ms-flex-direction: column;
             flex-direction: column;
     grid-column: span 1;
+  }
+  .other-packages__title {
+    margin-bottom: 37px;
+    font-size: 18px;
+    line-height: 23px;
   }
   .packag-card__img.full {
     width: 100%;
