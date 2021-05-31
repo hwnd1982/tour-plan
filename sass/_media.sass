@@ -23,6 +23,12 @@
       display: none
     &__reviwe-card
       max-height: 133px
+  // 
+  .other-activities
+    &__wrapper
+      height: 530px
+      gap: 20px
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr))
 @media (max-width: 992px)
   // Блок header
   .container
@@ -74,6 +80,13 @@
       margin-bottom: 45px
       font-size: 30px
       line-height: 38px
+  // 
+  .other-activities
+    padding-top: 60px
+    padding-bottom: 70px
+    &__title
+      font-size: 24px
+      line-height: 30px
   // Блок footer
   .logo-vertical
     width: 104px
@@ -171,6 +184,7 @@
         height: 12px
   // 
   .other-packages
+    padding-top: 20px
     &__cards
       height: 2580px
       grid-template-columns: 1fr
@@ -237,13 +251,25 @@
       transform: translate(-50%, 0)
   .review-slide
     top: 87px
-    max-height: 438px
+    max-height: 100%
+    height: 438px
     padding-left: 33px
     padding-right: 29px
     &__reviwe-card
       max-height: 266px
     &__text
       text-align: left
+  // 
+  .other-activities
+    padding-top: 40px
+    padding-bottom: 60px
+    &__title
+      margin-bottom: 36px
+      font-size: 18px
+      line-height: 23px
+    &__wrapper
+      height: 1080px
+      grid-template-columns: 1fr
   //  Блок footer
   .footer
     &-top
