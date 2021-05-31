@@ -60,12 +60,44 @@
     line-height: 23px
   &__text
     margin-top: 4px
+    margin-bottom: 34px
     font-size: 14px
     line-height: 160.6%
-  &__geo-link
+  &__info
+    margin-bottom: 24px
+    height: 67px
     display: flex
-    align-items: center
+    flex-direction: column
+    justify-content: space-between
     font-size: 12px
     line-height: 15px
-  &__icon-map-pin
+    &-item
+      display: flex
+      align-items: center
+  &__icons
     margin-right: 14px
+  &__old-price
+    margin-top: auto
+    font-size: 14px
+    line-height: 18px
+    text-decoration-line: line-through
+  &__get-offer
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__curent-price
+    font-weight: bold
+    font-size: 24px
+    line-height: 30px
+  &__button
+    width: 120px
+    background: $primery
+    padding: 11px 27px 10px 26px
+    border-radius: 4px
+    border: none
+    color: $alt-text-color
+    font-family: Nunito
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    white-space: nowrap
