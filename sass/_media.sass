@@ -9,14 +9,11 @@
     &__title
       font-size: 30px
       line-height: 38px
-    &__slider
-      // margin-top: 50px
   .review-slider
     &__buttons-bar
       top: 207px
     &__wrapper
       width: 579px
-      // height: 394px
   .review-slide
     top: 95px
     max-height: 299px
@@ -67,6 +64,12 @@
         width: 100%
         margin-right: 0
         margin-bottom: 30px
+  // 
+  .other-packages
+    &__cards
+      display: grid
+      height: 1564px
+      gap: 20px
   // Блок footer
   .logo-vertical
     width: 104px
@@ -162,6 +165,27 @@
       &__icon-arrows
         width: 12px
         height: 12px
+  // 
+  .other-packages
+    &__cards
+      height: 2580px
+      grid-template-columns: 1fr
+    &__card
+      &.full
+        flex-direction: column
+        grid-column: span 1
+  .packag-card
+    &__img
+      &.full
+        width: 100%
+        height: 50%
+    &__text, &__rating-bar
+      display: none
+    &__booking-info
+      &.full
+        padding: 30px 21px 25px 32px
+        height: 50%
+        width: 100%
   // Блок mailing
   .mailing
     background-size: 533% auto
@@ -194,12 +218,9 @@
       margin: auto
       font-size: 18px
       line-height: 23px
-    &__slider
-      // margin-top: 42px
   .review-slider
     &__wrapper
       width: 100%
-      // height: 438px
     &__buttons-bar
       top: 72px
       padding: 0
