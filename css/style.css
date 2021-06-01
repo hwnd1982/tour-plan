@@ -1761,7 +1761,7 @@ template {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .info__rating {
+  .info__rating-bar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1930,6 +1930,11 @@ template {
     height: 1080px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .other-activities__card:nth-child(2) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: 3 / 1;
   }
   .footer-top {
     -webkit-box-orient: vertical;

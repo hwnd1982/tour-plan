@@ -145,7 +145,7 @@
       padding-bottom: 20px
     &__text-group
       justify-content: space-between
-    &__rating
+    &__rating-bar
       display: flex
       margin-bottom: 0
       justify-content: space-between
@@ -259,7 +259,7 @@
       max-height: 266px
     &__text
       text-align: left
-  // 
+  // Блок other-activities
   .other-activities
     padding-top: 40px
     padding-bottom: 60px
@@ -270,6 +270,9 @@
     &__wrapper
       height: 1080px
       grid-template-columns: 1fr
+    &__card
+      &:nth-child(2)
+        grid-area: 3 / 1
   //  Блок footer
   .footer
     &-top
