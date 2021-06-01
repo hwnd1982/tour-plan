@@ -973,6 +973,36 @@ template {
   width: 50.138%;
 }
 
+.packag-card__flash-offer {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 60px;
+  height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  color: #ffffff;
+  background: #ec1f46;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.packag-card__flash-offer.full {
+  width: 95px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
 .packag-card__booking-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1842,6 +1872,12 @@ template {
     width: 100%;
     height: 50%;
   }
+  .packag-card__flash-offer.full {
+    width: 60px;
+    height: 18px;
+    font-size: 8px;
+    line-height: 10px;
+  }
   .packag-card__text, .packag-card__rating-bar {
     display: none;
   }
@@ -1906,8 +1942,7 @@ template {
   }
   .review-slide {
     top: 87px;
-    max-height: 100%;
-    height: 438px;
+    max-height: 438px;
     padding-left: 33px;
     padding-right: 29px;
   }
