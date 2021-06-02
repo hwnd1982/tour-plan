@@ -23,7 +23,7 @@
       display: none
     &__reviwe-card
       max-height: 133px
-  // 
+  // Блок other-activities
   .other-activities
     &__wrapper
       height: 530px
@@ -70,7 +70,7 @@
         width: 100%
         margin-right: 0
         margin-bottom: 30px
-  // 
+  // Блок other-packages
   .other-packages
     &__cards
       display: grid
@@ -80,7 +80,7 @@
       margin-bottom: 45px
       font-size: 30px
       line-height: 38px
-  // 
+  // Блок other-activities
   .other-activities
     padding-top: 60px
     padding-bottom: 70px
@@ -88,27 +88,21 @@
       font-size: 24px
       line-height: 30px
   // Блок footer
-  .logo-vertical
-    width: 104px
   .footer
     &-top
       padding-top: 73px
-      padding-bottom: 33px
-    &__logo-vertical
-      order: -1
-      margin-right: 46.8px
-      margin-bottom: 39px
-    &__menu
-      &:last-child
-        position: static
-        flex-basis: 70.1%
-        order: -1
-  .nav-menu
-    &__title
-      font-size: 18px
-      line-height: 23px
-    &__link
-      font-size: 14px
+      padding-bottom: 61px
+      gap: 38px
+      grid-template: repeat(auto-fit, minmax(120px, 1fr)) / 162px 260px 202px
+      &__logo
+        width: 104px
+        margin: 0
+      &__menu
+        &:nth-last-child(1)
+          grid-column: 2 / 4
+          grid-row: 1
+        &:nth-child(2)
+          width: 162px
 @media (max-width: 767px)
   .container
     max-width: 596px
@@ -182,7 +176,7 @@
       &__icon-arrows
         width: 12px
         height: 12px
-  // 
+  // Блок other-packages
   .other-packages
     padding-top: 20px
     &__cards
@@ -283,24 +277,23 @@
   //  Блок footer
   .footer
     &-top
-      flex-direction: column-reverse
-    &__logo-vertical
-      margin-right: 0
-      margin-top: 30px
-      order: 5
-    &__menu
-      margin-bottom: 30px
-      &:last-child
-        order: 4
-      &:nth-child(2)
-        margin-bottom: 0
+      gap: 30px
+      grid-template: repeat(auto-fill, minmax(67px, 1fr)) / 1fr
+      &__menu
+        &:nth-last-child(1)
+          grid-column: 1
+          grid-row: 2
+          width: 167px
+          height: 67px
+          align-content: space-between
+          flex-wrap: wrap
+        &:nth-last-child(2)
+          grid-column: 1
+          grid-row: 3
+          justify-self: start
   .social-network
-    display: flex
-    flex-wrap: wrap
     &__title
       margin-right: 0
-      margin-bottom: 20px
-      flex-basis: 100%
 @media (max-width: 576px)
   .mailing
     background-size: 700% auto

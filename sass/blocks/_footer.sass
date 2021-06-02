@@ -1,19 +1,66 @@
 .footer
   background-color: $additional
   &-top
-    display: flex
-    position: relative
+    display: grid
     padding-top: 108px
     padding-bottom: 89px
-    justify-content: space-between
-    flex-wrap: wrap
-  &__logo
-    margin-top: 21px
-  &__menu
-    &:nth-last-child(1)
-      position: absolute
-      bottom: 89px
-      left: 50%
+    grid-template: minmax(100px, 200px) 23px / repeat(auto-fit, minmax(120px, 1fr))
+    &__logo
+      margin-top: 21px
+    &__menu
+      &:nth-last-child(1)
+        grid-column: 3 / 5
+        grid-row: 2
+      &:nth-last-child(2)
+        // margin-left: auto
+        justify-self: end
+  &-contact
+    padding-bottom: 89px
+    display: grid
+    grid-template-columns: 0.5fr 0.5fr
+    &__details
+      display: flex
+      flex-direction: column
+      color: $alt-text-color
+    &__icons
+      align-self: center
+      fill: $link-color
+    &__phone-call
+      grid-column: 1
+      grid-row: 3
+    &__email
+      grid-column: 1
+      grid-row: 7
+    &__text
+      color: $link-color
+      align-self: center
+      grid-column: 2
+      font-size: 14px
+      line-height: 160%
+      &:last-child
+        grid-row: 7
+      &:nth-child(4)
+        grid-row: 3
+      &:nth-child(5)
+        grid-row: 4
+      &:nth-child(6)
+        grid-row: 5
+    &__info
+      margin-top: 22px
+      display: grid
+      column-gap: 20px
+      grid-template: repeat(7, 22px) / 20px 1fr
+    &__title
+      margin-top: 12px
+      margin-bottom: 24px
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+      text-transform: uppercase
+    &__subtitle
+      color: $link-color
+      font-size: 14px
+      line-height: 160%
 .logo-vertical
   width: 166px
 .social-network
@@ -37,15 +84,32 @@
   flex-direction: column
   color: $alt-text-color
   &__title
+    white-space: nowrap
     margin-bottom: 20px
     font-weight: bold
     font-size: 18px
     line-height: 23px
     text-transform: uppercase
   &__link
+    white-space: nowrap
     color: inherit
     font-weight: normal
     font-size: 14px
     line-height: 160%
     color: $link-color
     text-decoration: none
+.form
+  &__title
+    display: block
+    margin-bottom: 34px
+    color: $alt-text-color
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+  &__input-bar
+    display: grid
+    column-gap: 30px
+    grid-template: 50px 123px 1fr / 0.5fr 0.5fr
+  &__message
+    grid-column: span 2
