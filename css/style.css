@@ -1633,6 +1633,43 @@ template {
   line-height: 160%;
 }
 
+.footer-bottom {
+  padding-bottom: 46px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 136px 1fr 136px;
+      grid-template: 1fr / 136px 1fr 136px;
+}
+
+.footer-bottom__links-bar {
+  width: 283px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: end;
+      align-self: end;
+  justify-self: center;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+}
+
+.footer-bottom__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.footer-bottom__payment {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .logo-vertical {
   width: 166px;
 }
