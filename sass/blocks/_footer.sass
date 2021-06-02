@@ -109,7 +109,35 @@
     text-transform: uppercase
   &__input-bar
     display: grid
+    height: 260px
     column-gap: 30px
+    row-gap: 15px
     grid-template: 50px 123px 1fr / 0.5fr 0.5fr
+    font-size: 12px
+    line-height: 15px
+  &__name, &__phone
+    padding: 18px 23px
+    color: $link-color
+    border: none
+    border-radius: 4px
   &__message
     grid-column: span 2
+    padding: 18px 23px
+    overflow: hidden
+    resize: none
+    border: none
+    border-radius: 4px
+    color: $link-color
+  &__button
+    width: 160px
+    height: 50px
+    align-self: end
+    background: $primery
+    border: none
+    border-radius: 4px
+    color: $alt-text-color
+    font-weight: bold
+  &__note
+    justify-self: end
+    align-self: center
+    color: #e0e0e0
