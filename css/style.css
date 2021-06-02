@@ -1044,6 +1044,7 @@ template {
   margin-bottom: 34px;
   font-size: 14px;
   line-height: 160.6%;
+  overflow: auto;
 }
 
 .packag-card__info {
