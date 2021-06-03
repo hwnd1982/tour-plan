@@ -29,6 +29,13 @@
       height: 530px
       gap: 20px
       grid-template-columns: repeat(auto-fit, minmax(310px, 1fr))
+  // Блок footer
+  .footer
+    &-contact
+      &__info
+        height: 198px
+  .form
+    width: 465px
 @media (max-width: 992px)
   // Блок header
   .container
@@ -103,6 +110,23 @@
           grid-row: 1
         &:nth-child(2)
           width: 162px
+    &-contact
+      padding-bottom: 56px
+      row-gap: 60px
+      grid-template: 245px 1fr / 539px 1fr
+      &__title
+        margin-top: 0
+      &__info
+        height: 154px
+    &-bottom
+      padding-bottom: 33px
+      grid-template: 1fr / 1fr 136px
+      &__links-bar
+        grid-column: 1
+        justify-self: start
+  .form
+    width: 539px
+    grid-column: 1
 @media (max-width: 767px)
   .container
     max-width: 596px
@@ -291,6 +315,37 @@
           grid-column: 1
           grid-row: 3
           justify-self: start
+    &-contact
+      padding-bottom: 30px
+      grid-template: 245px 1fr / 1fr
+    &-bottom
+      padding-bottom: 22px
+      row-gap: 10px
+      grid-template: 15px 22px / 1fr
+      &__payment
+        width: 136px
+        grid-row: 2
+  .form
+    height: 386px
+    width: 100%
+    &__title
+      margin-bottom: 15px
+    &__input-bar
+      row-gap: 15px
+      column-gap: 0
+      grid-template: 50px 50px 123px 15px 50px / 1fr
+    // &__name
+    //   width: 100%
+    &__phone
+      // width: 100%
+      grid-row: 2
+    &__message
+      grid-row: 3
+      grid-column: 1
+    &__note
+      grid-row: 4
+      grid-column: 1
+      justify-self: start
   .social-network
     &__title
       margin-right: 0
@@ -300,3 +355,28 @@
   .logo
     line-height: 14px
     width: 99px
+@media (max-width: 546px)
+  .footer
+    &-contact
+      grid-template: 267px 1fr / 1fr
+      &__info
+        height: 176px
+@media (max-width: 541px)
+  .footer
+    &-contact
+      grid-template: 289px 1fr / 1fr
+      &__info
+        height: 198px
+@media (max-width: 455px)
+  .footer
+    &-contact
+      grid-template: 311px 1fr / 1fr
+      &__info
+        height: 220px
+@media (max-width: 451px)
+  .footer
+    &-contact
+      grid-template: 331px 1fr / 1fr
+      &__info
+        margin-top: 20px
+        height: 220px

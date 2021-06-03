@@ -1515,6 +1515,8 @@ template {
   display: grid;
   padding-top: 108px;
   padding-bottom: 89px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
   -ms-grid-rows: minmax(100px, 200px) 23px;
   -ms-grid-columns: (minmax(120px, 1fr))[auto-fit];
       grid-template: minmax(100px, 200px) 23px/repeat(auto-fit, minmax(120px, 1fr));
@@ -1538,11 +1540,11 @@ template {
 }
 
 .footer-contact {
-  padding-bottom: 89px;
+  padding-bottom: 94px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.5fr 0.5fr;
-      grid-template-columns: 0.5fr 0.5fr;
+  -ms-grid-columns: 1fr 81px 1fr;
+      grid-template-columns: 1fr 81px 1fr;
 }
 
 .footer-contact__details {
@@ -1557,66 +1559,63 @@ template {
 }
 
 .footer-contact__icons {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  width: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
   fill: #bdbdbd;
 }
 
 .footer-contact__phone-call {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  -ms-grid-row: 3;
-  grid-row: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
 }
 
 .footer-contact__email {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  -ms-grid-row: 7;
-  grid-row: 7;
-}
-
-.footer-contact__text {
-  color: #bdbdbd;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column: 2;
   grid-column: 2;
-  font-size: 14px;
-  line-height: 160%;
-}
-
-.footer-contact__text:last-child {
-  -ms-grid-row: 7;
-  grid-row: 7;
-}
-
-.footer-contact__text:nth-child(4) {
   -ms-grid-row: 3;
   grid-row: 3;
 }
 
-.footer-contact__text:nth-child(5) {
-  -ms-grid-row: 4;
-  grid-row: 4;
+.footer-contact__email-icon {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.footer-contact__text:nth-child(6) {
-  -ms-grid-row: 5;
-  grid-row: 5;
+.footer-contact__text {
+  display: block;
+  color: #bdbdbd;
+  font-size: 14px;
+  line-height: 160%;
 }
 
 .footer-contact__info {
+  height: 154px;
   margin-top: 22px;
   display: -ms-grid;
   display: grid;
   -webkit-column-gap: 20px;
           column-gap: 20px;
-  -ms-grid-rows: (22px)[7];
+  row-gap: 22px;
+  -ms-grid-rows: 1fr 1fr 1fr;
   -ms-grid-columns: 20px 1fr;
-      grid-template: repeat(7, 22px)/20px 1fr;
+      grid-template: 1fr 1fr 1fr / 20px 1fr;
 }
 
 .footer-contact__title {
@@ -1635,7 +1634,7 @@ template {
 }
 
 .footer-bottom {
-  padding-bottom: 46px;
+  padding-bottom: 63px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
@@ -1735,6 +1734,12 @@ template {
   line-height: 160%;
   color: #bdbdbd;
   text-decoration: none;
+}
+
+.form {
+  width: 539px;
+  -ms-grid-column: 3;
+  grid-column: 3;
 }
 
 .form__title {
@@ -1838,6 +1843,12 @@ template {
     -ms-grid-columns: (minmax(310px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   }
+  .footer-contact__info {
+    height: 198px;
+  }
+  .form {
+    width: 465px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1934,6 +1945,36 @@ template {
   }
   .footer-top__menu:nth-child(2) {
     width: 162px;
+  }
+  .footer-contact {
+    padding-bottom: 56px;
+    row-gap: 60px;
+    -ms-grid-rows: 245px 1fr;
+    -ms-grid-columns: 539px 1fr;
+        grid-template: 245px 1fr / 539px 1fr;
+  }
+  .footer-contact__title {
+    margin-top: 0;
+  }
+  .footer-contact__info {
+    height: 154px;
+  }
+  .footer-bottom {
+    padding-bottom: 33px;
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: 1fr 136px;
+        grid-template: 1fr / 1fr 136px;
+  }
+  .footer-bottom__links-bar {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .form {
+    width: 539px;
+    -ms-grid-column: 1;
+    grid-column: 1;
   }
 }
 
@@ -2193,6 +2234,57 @@ template {
     -ms-grid-column-align: start;
         justify-self: start;
   }
+  .footer-contact {
+    padding-bottom: 30px;
+    -ms-grid-rows: 245px 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 245px 1fr / 1fr;
+  }
+  .footer-bottom {
+    padding-bottom: 22px;
+    row-gap: 10px;
+    -ms-grid-rows: 15px 22px;
+    -ms-grid-columns: 1fr;
+        grid-template: 15px 22px / 1fr;
+  }
+  .footer-bottom__payment {
+    width: 136px;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .form {
+    height: 386px;
+    width: 100%;
+  }
+  .form__title {
+    margin-bottom: 15px;
+  }
+  .form__input-bar {
+    row-gap: 15px;
+    -webkit-column-gap: 0;
+            column-gap: 0;
+    -ms-grid-rows: 50px 50px 123px 15px 50px;
+    -ms-grid-columns: 1fr;
+        grid-template: 50px 50px 123px 15px 50px / 1fr;
+  }
+  .form__phone {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .form__message {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .form__note {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
   .social-network__title {
     margin-right: 0;
   }
@@ -2205,6 +2297,51 @@ template {
   .logo {
     line-height: 14px;
     width: 99px;
+  }
+}
+
+@media (max-width: 546px) {
+  .footer-contact {
+    -ms-grid-rows: 267px 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 267px 1fr / 1fr;
+  }
+  .footer-contact__info {
+    height: 176px;
+  }
+}
+
+@media (max-width: 541px) {
+  .footer-contact {
+    -ms-grid-rows: 289px 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 289px 1fr / 1fr;
+  }
+  .footer-contact__info {
+    height: 198px;
+  }
+}
+
+@media (max-width: 455px) {
+  .footer-contact {
+    -ms-grid-rows: 311px 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 311px 1fr / 1fr;
+  }
+  .footer-contact__info {
+    height: 220px;
+  }
+}
+
+@media (max-width: 451px) {
+  .footer-contact {
+    -ms-grid-rows: 331px 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 331px 1fr / 1fr;
+  }
+  .footer-contact__info {
+    margin-top: 20px;
+    height: 220px;
   }
 }
 /*# sourceMappingURL=style.css.map */
