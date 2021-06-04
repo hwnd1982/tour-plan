@@ -1625,6 +1625,10 @@ template {
   line-height: 160%;
 }
 
+.footer-contact__call-num {
+  text-decoration: none;
+}
+
 .footer-contact__info {
   margin-top: 22px;
   display: -ms-grid;
