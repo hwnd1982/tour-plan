@@ -16,6 +16,7 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
     grid-template-rows: repeat(auto-fit, minmax(500px, 1fr))
 .packag-card
+  position: relative
   display: flex
   flex-direction: column
   justify-content: flex-end
@@ -84,12 +85,15 @@
   &__text
     display: none
     &.full
+      height: 165px
       display: block
       margin-top: 4px
       margin-bottom: 34px
       font-size: 14px
       line-height: 160.6%
       overflow: auto
+      &::-webkit-scrollbar
+        width: 0
   &__info
     margin-bottom: 24px
     height: 67px
@@ -117,6 +121,7 @@
     font-size: 24px
     line-height: 30px
   &__button
+    z-index: 10
     width: 120px
     background: $primery
     padding: 11px 27px 10px 26px

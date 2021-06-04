@@ -933,6 +933,7 @@ template {
 }
 
 .packag-card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1052,12 +1053,17 @@ template {
 }
 
 .packag-card__text.full {
+  height: 165px;
   display: block;
   margin-top: 4px;
   margin-bottom: 34px;
   font-size: 14px;
   line-height: 160.6%;
   overflow: auto;
+}
+
+.packag-card__text.full::-webkit-scrollbar {
+  width: 0;
 }
 
 .packag-card__info {
@@ -1117,6 +1123,7 @@ template {
 }
 
 .packag-card__button {
+  z-index: 10;
   width: 120px;
   background: #ec1f46;
   padding: 11px 27px 10px 26px;
@@ -1619,16 +1626,17 @@ template {
 }
 
 .footer-contact__info {
-  height: 154px;
   margin-top: 22px;
   display: -ms-grid;
   display: grid;
   -webkit-column-gap: 20px;
           column-gap: 20px;
   row-gap: 22px;
-  -ms-grid-rows: 1fr 1fr 1fr;
+  -ms-grid-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
+  -ms-grid-rows: min-content min-content min-content;
   -ms-grid-columns: 20px 1fr;
-      grid-template: 1fr 1fr 1fr / 20px 1fr;
+      grid-template: -webkit-min-content -webkit-min-content min-content/ 20px 1fr;
+      grid-template: min-content min-content min-content/ 20px 1fr;
 }
 
 .footer-contact__title {
@@ -1856,9 +1864,6 @@ template {
     -ms-grid-columns: (minmax(310px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   }
-  .footer-contact__info {
-    height: 198px;
-  }
   .form {
     width: 465px;
   }
@@ -1968,9 +1973,6 @@ template {
   }
   .footer-contact__title {
     margin-top: 0;
-  }
-  .footer-contact__info {
-    height: 154px;
   }
   .footer-bottom {
     padding-bottom: 33px;
@@ -2128,7 +2130,7 @@ template {
     font-size: 8px;
     line-height: 10px;
   }
-  .packag-card__text, .packag-card__rating-bar {
+  .packag-card__text.full, .packag-card__rating-bar.full {
     display: none;
   }
   .packag-card__booking-info.full {
@@ -2249,9 +2251,11 @@ template {
   }
   .footer-contact {
     padding-bottom: 30px;
-    -ms-grid-rows: 245px 1fr;
+    -ms-grid-rows: -webkit-min-content 1fr;
+    -ms-grid-rows: min-content 1fr;
     -ms-grid-columns: 1fr;
-        grid-template: 245px 1fr / 1fr;
+        grid-template: -webkit-min-content 1fr / 1fr;
+        grid-template: min-content 1fr / 1fr;
   }
   .footer-bottom {
     padding-bottom: 22px;
@@ -2310,51 +2314,6 @@ template {
   .logo {
     line-height: 14px;
     width: 99px;
-  }
-}
-
-@media (max-width: 546px) {
-  .footer-contact {
-    -ms-grid-rows: 267px 1fr;
-    -ms-grid-columns: 1fr;
-        grid-template: 267px 1fr / 1fr;
-  }
-  .footer-contact__info {
-    height: 176px;
-  }
-}
-
-@media (max-width: 541px) {
-  .footer-contact {
-    -ms-grid-rows: 289px 1fr;
-    -ms-grid-columns: 1fr;
-        grid-template: 289px 1fr / 1fr;
-  }
-  .footer-contact__info {
-    height: 198px;
-  }
-}
-
-@media (max-width: 455px) {
-  .footer-contact {
-    -ms-grid-rows: 311px 1fr;
-    -ms-grid-columns: 1fr;
-        grid-template: 311px 1fr / 1fr;
-  }
-  .footer-contact__info {
-    height: 220px;
-  }
-}
-
-@media (max-width: 451px) {
-  .footer-contact {
-    -ms-grid-rows: 331px 1fr;
-    -ms-grid-columns: 1fr;
-        grid-template: 331px 1fr / 1fr;
-  }
-  .footer-contact__info {
-    margin-top: 20px;
-    height: 220px;
   }
 }
 /*# sourceMappingURL=style.css.map */
