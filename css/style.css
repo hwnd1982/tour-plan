@@ -1630,6 +1630,7 @@ template {
 }
 
 .footer-contact__link {
+  white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
 }
