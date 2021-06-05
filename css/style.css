@@ -461,6 +461,7 @@ template {
   width: 65px;
   border: none;
   background-color: #ec1f46;
+  cursor: pointer;
 }
 
 .search__icon {
@@ -806,6 +807,7 @@ template {
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
+  cursor: pointer;
 }
 
 .hotel-slider {
@@ -1135,6 +1137,7 @@ template {
   font-size: 14px;
   line-height: 19px;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .review__container {
@@ -1436,6 +1439,7 @@ template {
   line-height: 15px;
   color: #ffffff;
   background-color: #ec1f46;
+  cursor: pointer;
 }
 
 .other-activities {
@@ -1518,6 +1522,7 @@ template {
   font-size: 12px;
   line-height: 16px;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .other-activities__text {
@@ -1630,6 +1635,10 @@ template {
   cursor: pointer;
 }
 
+.footer-contact__link:hover {
+  color: #ffffff;
+}
+
 .footer-contact__info {
   margin-top: 22px;
   display: -ms-grid;
@@ -1733,6 +1742,10 @@ template {
   margin-right: 10px;
 }
 
+.social-network__link:hover {
+  fill: #ffffff;
+}
+
 .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1762,6 +1775,10 @@ template {
   color: #bdbdbd;
   text-decoration: none;
   cursor: pointer;
+}
+
+.nav-menu__link:hover {
+  color: #ffffff;
 }
 
 .form {
@@ -1822,6 +1839,7 @@ template {
   border-radius: 4px;
   color: #ffffff;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .form__note {
@@ -2341,9 +2359,6 @@ template {
     line-height: 14px;
     width: 99px;
   }
-}
-
-@media (max-width: 439px) {
   .footer-top {
     gap: 30px;
     -ms-grid-columns: 1fr;
