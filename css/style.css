@@ -2359,6 +2359,9 @@ template {
     line-height: 14px;
     width: 99px;
   }
+}
+
+@media (max-width: 439px) {
   .footer-top {
     gap: 30px;
     -ms-grid-columns: 1fr;
@@ -2387,13 +2390,13 @@ template {
     -ms-grid-column-align: start;
         justify-self: start;
   }
-  .footer-top__menu:nth-child(2) {
+  .footer-top__menu:nth-child(3) {
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-row: 4;
     grid-row: 4;
   }
-  .footer-top__menu:nth-child(3) {
+  .footer-top__menu:nth-child(2) {
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-row: 5;
