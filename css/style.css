@@ -1624,7 +1624,6 @@ template {
 }
 
 .footer-contact__text {
-  display: block;
   color: #bdbdbd;
   font-size: 14px;
   line-height: 160%;
