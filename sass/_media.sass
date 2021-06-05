@@ -120,6 +120,20 @@
   .form
     width: 539px
     grid-column: 1
+@media (min-width: 992px)
+  .footer
+    &-contact
+      &__link
+        &:hover
+          color: $alt-text-color
+  .nav-menu
+    &__link
+      &:hover
+        color: $alt-text-color
+  .social-network
+    &__link
+      &:hover
+        fill: $alt-text-color
 @media (max-width: 767px)
   .container
     max-width: 596px
@@ -355,6 +369,7 @@
 @media (max-width: 439px)
   .footer
     &-top
+      padding-bottom: 40px
       gap: 30px
       grid-template-columns: 1fr
       &__menu

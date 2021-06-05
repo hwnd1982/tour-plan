@@ -1635,10 +1635,6 @@ template {
   cursor: pointer;
 }
 
-.footer-contact__link:hover {
-  color: #ffffff;
-}
-
 .footer-contact__info {
   margin-top: 22px;
   display: -ms-grid;
@@ -1742,10 +1738,6 @@ template {
   margin-right: 10px;
 }
 
-.social-network__link:hover {
-  fill: #ffffff;
-}
-
 .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1775,10 +1767,6 @@ template {
   color: #bdbdbd;
   text-decoration: none;
   cursor: pointer;
-}
-
-.nav-menu__link:hover {
-  color: #ffffff;
 }
 
 .form {
@@ -2015,6 +2003,18 @@ template {
     width: 539px;
     -ms-grid-column: 1;
     grid-column: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-contact__link:hover {
+    color: #ffffff;
+  }
+  .nav-menu__link:hover {
+    color: #ffffff;
+  }
+  .social-network__link:hover {
+    fill: #ffffff;
   }
 }
 
@@ -2363,6 +2363,7 @@ template {
 
 @media (max-width: 439px) {
   .footer-top {
+    padding-bottom: 40px;
     gap: 30px;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
