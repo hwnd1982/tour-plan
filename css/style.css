@@ -2046,7 +2046,6 @@ template {
             transform: translate(50%, 197px);
     max-width: 245px;
     top: 0;
-    z-index: 49;
     -webkit-transition: all 0.5s ease 0.5s;
     transition: all 0.5s ease 0.5s;
   }
@@ -2058,7 +2057,6 @@ template {
     top: 0;
     -webkit-transition: all 0.5s ease 0.5s;
     transition: all 0.5s ease 0.5s;
-    z-index: 49;
   }
   .navbar-menu {
     padding-top: 205px;
@@ -2471,6 +2469,9 @@ template {
   .logo {
     line-height: 14px;
     width: 99px;
+  }
+  .navbar-menu {
+    top: 70px;
   }
 }
 
