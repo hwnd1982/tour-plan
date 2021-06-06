@@ -135,9 +135,6 @@
       &:hover
         fill: $alt-text-color
 @media (max-width: 767px)
-  body
-    &.lock
-      overflow: hidden
   .container
     max-width: 596px
     width: 87.5%
@@ -439,6 +436,24 @@
   .navbar
     &-menu
       top: 70px
+  .modal
+    &__wrapper
+      padding: 33px 12.5vw
+  .modal-form
+    grid-template: repeat( 7, min-content) / 302px
+    &__button
+      order: 7
+      grid-column: 1
+      width: 100%
+    &__note
+      grid-column: 1
+      justify-self: start
+@media (max-width: 480px)
+  .modal
+    &__wrapper
+      padding: 33px 10vw
+  .modal-form
+    grid-template-columns: 62.5vw
 @media (max-width: 439px)
   .footer
     &-top

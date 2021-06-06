@@ -9,6 +9,10 @@ body {
   background-color: #f5fafe;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1110px;
   margin: auto;
@@ -1864,6 +1868,7 @@ template {
   position: absolute;
   top: 17px;
   right: 18px;
+  padding: 0;
   border: none;
   background-color: #0a223d;
 }
@@ -1882,9 +1887,9 @@ template {
   row-gap: 15px;
   -ms-grid-rows: (-webkit-min-content)[6];
   -ms-grid-rows: (min-content)[6];
-  -ms-grid-columns: 160px 152px;
-      grid-template: repeat(6, -webkit-min-content)/160px 152px;
-      grid-template: repeat(6, min-content)/160px 152px;
+  -ms-grid-columns: 160px 142px;
+      grid-template: repeat(6, -webkit-min-content)/160px 142px;
+      grid-template: repeat(6, min-content)/160px 142px;
   font-size: 12px;
 }
 
@@ -1914,6 +1919,7 @@ template {
   overflow: hidden;
   resize: none;
   border: none;
+  height: 123px;
   border-radius: 4px;
   color: #bdbdbd;
 }
@@ -1926,6 +1932,7 @@ template {
   border: none;
   border-radius: 4px;
   color: #ffffff;
+  line-height: 15px;
 }
 
 .modal-form__note {
@@ -2119,9 +2126,6 @@ template {
 }
 
 @media (max-width: 767px) {
-  body.lock {
-    overflow: hidden;
-  }
   .container {
     max-width: 596px;
     width: 87.5%;
@@ -2572,6 +2576,40 @@ template {
   }
   .navbar-menu {
     top: 70px;
+  }
+  .modal__wrapper {
+    padding: 33px 12.5vw;
+  }
+  .modal-form {
+    -ms-grid-rows: (-webkit-min-content)[7];
+    -ms-grid-rows: (min-content)[7];
+    -ms-grid-columns: 302px;
+        grid-template: repeat(7, -webkit-min-content)/302px;
+        grid-template: repeat(7, min-content)/302px;
+  }
+  .modal-form__button {
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    width: 100%;
+  }
+  .modal-form__note {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal__wrapper {
+    padding: 33px 10vw;
+  }
+  .modal-form {
+    -ms-grid-columns: 62.5vw;
+        grid-template-columns: 62.5vw;
   }
 }
 
