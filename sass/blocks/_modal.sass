@@ -1,0 +1,67 @@
+.modal
+  &__overlay
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 99
+    background: rgba(0, 143, 223, 0.39)
+  &__wrapper
+    position: absolute
+    padding: 33px 88px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background-color: $additional
+    border-radius: 8px
+  &__button-close
+    position: absolute
+    top: 17px
+    right: 18px
+    border: none
+    background-color: $additional
+  &__icon-close
+    fill: $alt-text-color
+  &.hidden
+    display: none
+.modal-form
+  display: grid
+  row-gap: 15px
+  grid-template: repeat( 6, min-content) / 160px 152px
+  font-size: 12px
+  &__title
+    grid-column: span 2
+    justify-self: center
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+    color: $alt-text-color
+  &__name, &__phone, &__email
+    grid-column: span 2
+    padding: 18px 23px 17px
+    color: $link-color
+    border: none
+    border-radius: 4px
+    line-height: 15px
+  &__message
+    grid-column: span 2
+    padding: 18px 23px
+    overflow: hidden
+    resize: none
+    border: none
+    border-radius: 4px
+    color: $link-color
+  &__button
+    grid-column: 1
+    background-color: $primery
+    padding: 18px 65px 17px 66px
+    border: none
+    border-radius: 4px
+    color: $alt-text-color
+  &__note
+    grid-column: 2
+    color: #e0e0e0
+    align-self: center
+    justify-self: end

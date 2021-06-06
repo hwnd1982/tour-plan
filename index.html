@@ -232,7 +232,7 @@
                   </svg>
                   12100
                 </a>
-                <button class="booking-form__button">View Other Options</button>
+                <button class="booking-form__button book-now">View Other Options</button>
               </div>
               <!-- /.booking-form__call -->
             </form>
@@ -351,7 +351,7 @@
               <span class="packag-card__old-price">$ 10,500</span>
               <div class="packag-card__get-offer">
                 <span class="packag-card__curent-price">$ 8,500</span>
-                <button class="packag-card__button">Book Now</button>
+                <button class="packag-card__button book-now">Book Now</button>
               </div>
               <!-- /.packag-card__get-offer -->
             </div>
@@ -446,7 +446,7 @@
               <span class="packag-card__old-price">$ 8,500</span>
               <div class="packag-card__get-offer">
                 <span class="packag-card__curent-price">$ 3,000</span>
-                <button class="packag-card__button">Book Now</button>
+                <button class="packag-card__button book-now">Book Now</button>
               </div>
               <!-- /.packag-card__get-offer -->
             </div>
@@ -549,7 +549,7 @@
               <span class="packag-card__old-price">$ 10,500</span>
               <div class="packag-card__get-offer">
                 <span class="packag-card__curent-price">$ 9,500</span>
-                <button class="packag-card__button">Book Now</button>
+                <button class="packag-card__button book-now">Book Now</button>
               </div>
               <!-- /.packag-card__get-offer -->
             </div>
@@ -645,7 +645,7 @@
               <span class="packag-card__old-price">$ 4,500</span>
               <div class="packag-card__get-offer">
                 <span class="packag-card__curent-price">$ 2,500</span>
-                <button class="packag-card__button">Book Now</button>
+                <button class="packag-card__button book-now">Book Now</button>
               </div>
               <!-- /.packag-card__get-offer -->
             </div>
@@ -743,7 +743,7 @@
               <span class="packag-card__old-price">$ 6,500</span>
               <div class="packag-card__get-offer">
                 <span class="packag-card__curent-price">$ 3,500</span>
-                <button class="packag-card__button">Book Now</button>
+                <button class="packag-card__button book-now">Book Now</button>
               </div>
               <!-- /.packag-card__get-offer -->
             </div>
@@ -1131,7 +1131,7 @@
             class="other-activities__img"
           >
           <span class="other-activities__text">The curious corner of<br>chamarel</span>
-          <button class="other-activities__button">Book Now</button>
+          <button class="other-activities__button book-now">Book Now</button>
         </div>
         <!-- /.other-activities__card -->
         <div class="other-activities__card">
@@ -1141,7 +1141,7 @@
             class="other-activities__img"
           >
           <span class="other-activities__text">Gymkhana club golf<br>course</span>
-          <button class="other-activities__button">Book Now</button>
+          <button class="other-activities__button book-now">Book Now</button>
         </div>
         <!-- /.other-activities__card -->
         <div class="other-activities__card">
@@ -1161,7 +1161,7 @@
             class="other-activities__img"
           >
           <span class="other-activities__text">The blue marine discovery<br>quest</span>
-          <button class="other-activities__button">Book Now</button>
+          <button class="other-activities__button book-now">Book Now</button>
         </div>
         <!-- /.other-activities__card -->
       </div>
@@ -1323,6 +1323,7 @@
           </div>
           <!-- /.form__input-bar -->
         </div>
+        <!-- /.footer-contact__form form -->
       </div>
       <!-- /.footer-contact -->
       <div class="footer-bottom">
@@ -1337,5 +1338,33 @@
     </div>
     <!-- /.container -->
   </footer>
+  <div class="modal hidden">
+    <div class="modal__overlay">
+      <div class="modal__wrapper">
+        <div class="modal__form modal-form">
+          <span class="modal-form__title">Booking</span>
+          <input type="text" class="modal-form__name" placeholder="Your Full Name*">
+          <input type="text" class="modal-form__phone" placeholder="Phone Number*">
+          <input type="text" class="modal-form__email" placeholder="Email*">
+          <textarea name="Message" cols="30" rows="5" class="modal-form__message" placeholder="Message"></textarea>
+          <button class="modal-form__button">Send</button>
+          <span class="modal-form__note">* Required Fields</span>
+        </div>
+        <!-- /.modal__form modal-form -->
+        <button class="modal__button-close">
+          <svg
+            class="modal__icon-close"
+            width="17"
+            height="16"
+          >
+            <use href="img/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- /.modal__wrapper -->
+    </div>
+    <!-- /.modal__overlay -->
+  </div>
+  <!-- /.modal -->
 </body>
 </html>

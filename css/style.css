@@ -1839,6 +1839,106 @@ template {
   color: #e0e0e0;
 }
 
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background: rgba(0, 143, 223, 0.39);
+}
+
+.modal__wrapper {
+  position: absolute;
+  padding: 33px 88px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #0a223d;
+  border-radius: 8px;
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  border: none;
+  background-color: #0a223d;
+}
+
+.modal__icon-close {
+  fill: #ffffff;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-form {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 15px;
+  -ms-grid-rows: (-webkit-min-content)[6];
+  -ms-grid-rows: (min-content)[6];
+  -ms-grid-columns: 160px 152px;
+      grid-template: repeat(6, -webkit-min-content)/160px 152px;
+      grid-template: repeat(6, min-content)/160px 152px;
+  font-size: 12px;
+}
+
+.modal-form__title {
+  grid-column: span 2;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.modal-form__name, .modal-form__phone, .modal-form__email {
+  grid-column: span 2;
+  padding: 18px 23px 17px;
+  color: #bdbdbd;
+  border: none;
+  border-radius: 4px;
+  line-height: 15px;
+}
+
+.modal-form__message {
+  grid-column: span 2;
+  padding: 18px 23px;
+  overflow: hidden;
+  resize: none;
+  border: none;
+  border-radius: 4px;
+  color: #bdbdbd;
+}
+
+.modal-form__button {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  background-color: #ec1f46;
+  padding: 18px 65px 17px 66px;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.modal-form__note {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  color: #e0e0e0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
