@@ -135,17 +135,60 @@
       &:hover
         fill: $alt-text-color
 @media (max-width: 767px)
+  body
+    &.lock
+      overflow: hidden
   .container
     max-width: 596px
     width: 87.5%
   // Блок header
   .navbar
-    &__search, &-menu, &__user
-      display: none
+    position: relative
     &-top
+      position: fixed
+      right: 0
+      left: 0
+      z-index: 50
       &__container
         padding-top: 28px
         padding-bottom: 28px
+    &__search
+      position: absolute
+      left: 50%
+      transform: translate(-50%, 197px)
+      max-width: 245px
+      top: 0
+      z-index: 49
+      transition: top 1s ease 0s
+    &__user
+      position: absolute
+      left: 50%
+      transform: translate(-50%, 101px)
+      top: 0
+      transition: top 1s ease 0s
+      z-index: 49
+    &-menu
+      padding-top: 205px
+      position: fixed
+      width: 100%
+      height: 100%
+      z-index: 49
+      top: 74px
+      transition: top 1s ease 0s
+      &__container
+        height: 225px
+        flex-direction: column
+        align-items: center
+    .user
+      flex-direction: column
+      align-items: center
+      &__name
+        color: $alt-text-color
+        margin-left: 0
+        margin-top: 10px
+    .hidden
+      top: -1000px
+      transition: top 1s ease 0s
     .menu
       &-button
         display: flex
@@ -198,6 +241,7 @@
       height: 172.94px
       max-width: 100%
   .hotel
+    padding-top: 70px
     &-slider
       &__wrapper
         height: 56vw

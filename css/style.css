@@ -2019,16 +2019,85 @@ template {
 }
 
 @media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
   .container {
     max-width: 596px;
     width: 87.5%;
   }
-  .navbar__search, .navbar-menu, .navbar__user {
-    display: none;
+  .navbar {
+    position: relative;
+  }
+  .navbar-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 50;
   }
   .navbar-top__container {
     padding-top: 28px;
     padding-bottom: 28px;
+  }
+  .navbar__search {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 197px);
+            transform: translate(-50%, 197px);
+    max-width: 245px;
+    top: 0;
+    z-index: 49;
+    -webkit-transition: top 1s ease 0s;
+    transition: top 1s ease 0s;
+  }
+  .navbar__user {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 101px);
+            transform: translate(-50%, 101px);
+    top: 0;
+    -webkit-transition: top 1s ease 0s;
+    transition: top 1s ease 0s;
+    z-index: 49;
+  }
+  .navbar-menu {
+    padding-top: 205px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 49;
+    top: 74px;
+    -webkit-transition: top 1s ease 0s;
+    transition: top 1s ease 0s;
+  }
+  .navbar-menu__container {
+    height: 225px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .user {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .user__name {
+    color: #ffffff;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .navbar .hidden {
+    top: -1000px;
+    -webkit-transition: top 1s ease 0s;
+    transition: top 1s ease 0s;
   }
   .navbar .menu-button {
     display: -webkit-box;
@@ -2113,6 +2182,9 @@ template {
   .info__map {
     height: 172.94px;
     max-width: 100%;
+  }
+  .hotel {
+    padding-top: 70px;
   }
   .hotel-slider__wrapper {
     height: 56vw;

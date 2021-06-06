@@ -13,6 +13,7 @@
   <script src="js/slider.js" defer></script>
   <script src="js/parallaks.js" defer></script>
   <script src="js/package-toggle.js" defer></script>
+  <script src="js/mobile-menu.js" defer></script>
   <title>Best Tour Plan - Hotel Booking </title>
 </head>
 
@@ -26,7 +27,7 @@
           <img src="img/horizontal-logo.min.svg" alt="Logo: Best Tour Plan" class="logo__img">
         </a>
         <!-- Форма поиска -->
-        <form action="#" class="search navbar__search">
+        <form action="#" class="search navbar__search hidden">
           <input type="search" class="search__input" placeholder="Search Location">
           <button class="search__button">
             <svg
@@ -39,7 +40,7 @@
           </button>
         </form>
         <!-- Пользователь -->
-        <a href="#" class="user navbar__user">
+        <a href="#" class="user navbar__user hidden">
           <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="avatar user__avatar">
           <span class="user__name">Nathan</span>
         </a>
@@ -52,7 +53,7 @@
       <!-- /.container -->
     </div>
     <!-- /.navbar-top -->
-    <nav class="navbar-menu">
+    <nav class="navbar-menu hidden">
         <div class="container navbar-menu__container">
           <a href="#" class="navbar-menu__link">All Deals</a>
           <a href="#" class="navbar-menu__link">Hotels</a>
