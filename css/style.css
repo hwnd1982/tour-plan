@@ -2031,7 +2031,7 @@ template {
   }
   .navbar-top {
     position: fixed;
-    right: 0;
+    width: 100%;
     left: 0;
     z-index: 50;
   }
@@ -2041,14 +2041,14 @@ template {
   }
   .navbar__search {
     position: absolute;
-    left: 50%;
-    -webkit-transform: translate(-50%, 197px);
-            transform: translate(-50%, 197px);
+    right: 50%;
+    -webkit-transform: translate(50%, 197px);
+            transform: translate(50%, 197px);
     max-width: 245px;
     top: 0;
     z-index: 49;
-    -webkit-transition: top 1s ease 0s;
-    transition: top 1s ease 0s;
+    -webkit-transition: all 0.5s ease 0.5s;
+    transition: all 0.5s ease 0.5s;
   }
   .navbar__user {
     position: absolute;
@@ -2056,8 +2056,8 @@ template {
     -webkit-transform: translate(-50%, 101px);
             transform: translate(-50%, 101px);
     top: 0;
-    -webkit-transition: top 1s ease 0s;
-    transition: top 1s ease 0s;
+    -webkit-transition: all 0.5s ease 0.5s;
+    transition: all 0.5s ease 0.5s;
     z-index: 49;
   }
   .navbar-menu {
@@ -2067,8 +2067,8 @@ template {
     height: 100%;
     z-index: 49;
     top: 74px;
-    -webkit-transition: top 1s ease 0s;
-    transition: top 1s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
   }
   .navbar-menu__container {
     height: 225px;
@@ -2094,12 +2094,23 @@ template {
     margin-left: 0;
     margin-top: 10px;
   }
-  .navbar .hidden {
+  .navbar .hidden.navbar-menu {
     top: -1000px;
-    -webkit-transition: top 1s ease 0s;
-    transition: top 1s ease 0s;
+    -webkit-transition: all 0.5s ease 0.5s;
+    transition: all 0.5s ease 0.5s;
+  }
+  .navbar .hidden.user {
+    left: -1000px;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+  }
+  .navbar .hidden.search {
+    right: -1000px;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
   }
   .navbar .menu-button {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2121,9 +2132,39 @@ template {
     background-color: #ffffff;
   }
   .navbar .menu-button__line {
+    position: absolute;
     width: 100%;
     height: 1px;
     background-color: #333333;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .navbar .menu-button__line:first-child {
+    top: 0;
+  }
+  .navbar .menu-button__line:last-child {
+    bottom: 0;
+  }
+  .navbar .menu-button__line:nth-child(2) {
+    top: 5px;
+  }
+  .navbar .active span {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .navbar .active span:first-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 5px;
+  }
+  .navbar .active span:nth-child(2) {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .navbar .active span:last-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 5px;
   }
   .info {
     padding-bottom: 40px;

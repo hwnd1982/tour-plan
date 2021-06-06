@@ -146,7 +146,7 @@
     position: relative
     &-top
       position: fixed
-      right: 0
+      width: 100%
       left: 0
       z-index: 50
       &__container
@@ -154,18 +154,18 @@
         padding-bottom: 28px
     &__search
       position: absolute
-      left: 50%
-      transform: translate(-50%, 197px)
+      right: 50%
+      transform: translate(50%, 197px)
       max-width: 245px
       top: 0
       z-index: 49
-      transition: top 1s ease 0s
+      transition: all 0.5s ease 0.5s
     &__user
       position: absolute
       left: 50%
       transform: translate(-50%, 101px)
       top: 0
-      transition: top 1s ease 0s
+      transition: all 0.5s ease 0.5s
       z-index: 49
     &-menu
       padding-top: 205px
@@ -174,7 +174,7 @@
       height: 100%
       z-index: 49
       top: 74px
-      transition: top 1s ease 0s
+      transition: all 0.5s ease 0s
       &__container
         height: 225px
         flex-direction: column
@@ -187,10 +187,19 @@
         margin-left: 0
         margin-top: 10px
     .hidden
-      top: -1000px
-      transition: top 1s ease 0s
+      &.navbar
+        &-menu
+          top: -1000px
+          transition: all 0.5s ease 0.5s
+      &.user
+        left: -1000px
+        transition: all 0.5s ease 0s
+      &.search
+        right: -1000px
+        transition: all 0.5s ease 0s
     .menu
       &-button
+        position: relative
         display: flex
         width: 16px
         height: 11px
@@ -202,9 +211,28 @@
         border: none
         background-color: $alt-text-color
         &__line
+          position: absolute
           width: 100%
           height: 1px
           background-color: $text-color
+          transition: all 0.3s ease 0s
+          &:first-child
+            top: 0
+          &:last-child
+            bottom: 0
+          &:nth-child(2)
+            top: 5px
+    .active
+      & span
+        transition: all 0.3s ease 0s
+        &:first-child
+          transform: rotate(45deg)
+          top: 5px
+        &:nth-child(2)
+          transform: scale(0)
+        &:last-child
+          transform: rotate(-45deg)
+          bottom: 5px
   // Блок hotel
   .info
     padding-bottom: 40px
