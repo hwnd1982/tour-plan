@@ -1,5 +1,5 @@
-const mobileMenuSearch = document.querySelector('.search')
-const mobileMenuUser = document.querySelector('.user')
+const mobileMenuSearch = document.querySelector('.navbar-menu__search')
+const mobileMenuUser = document.querySelector('.navbar-menu__user')
 const mobileMenuNavbarMenu = document.querySelector('.navbar-menu')
 const mobileMenuButton = document.querySelector('.menu-button')
 
