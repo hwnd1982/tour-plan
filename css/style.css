@@ -398,6 +398,12 @@ template {
   display: none;
 }
 
+.navbar__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .navbar__search {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,9 +484,6 @@ template {
 }
 
 .user {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
