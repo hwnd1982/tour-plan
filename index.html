@@ -28,7 +28,7 @@
           <img src="img/horizontal-logo.min.svg" alt="Logo: Best Tour Plan" class="logo__img">
         </a>
         <!-- Форма поиска -->
-        <form action="#" class="search navbar__search hidden">
+        <form action="#" class="search navbar__search">
           <input type="search" class="search__input" placeholder="Search Location">
           <button class="search__button">
             <svg
@@ -41,7 +41,7 @@
           </button>
         </form>
         <!-- Пользователь -->
-        <a href="#" class="user navbar__user hidden">
+        <a href="#" class="user navbar__user">
           <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="avatar user__avatar">
           <span class="user__name">Nathan</span>
         </a>
@@ -54,17 +54,36 @@
       <!-- /.container -->
     </div>
     <!-- /.navbar-top -->
-    <nav class="navbar-menu hidden">
-        <div class="container navbar-menu__container">
-          <a href="#" class="navbar-menu__link">All Deals</a>
-          <a href="#" class="navbar-menu__link">Hotels</a>
-          <a href="#" class="navbar-menu__link">Activities</a>
-          <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
-          <a href="#" class="navbar-menu__link">Restaurants</a>
-          <a href="#" class="navbar-menu__link">Events</a>
-          <a href="#" class="navbar-menu__link">Rodrigues</a>
-        </div>
-        <!-- /.container -->
+    <nav class="navbar-menu hidden"> 
+      <div class="container navbar-menu__container">
+        <!-- Пользователь -->
+        <a href="#" class="user navbar-menu__user hidden">
+          <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="avatar user__avatar">
+          <span class="user__name">Nathan</span>
+        </a> 
+        <!-- Форма поиска -->
+        <form action="#" class="search navbar-menu__search hidden">
+          <input type="search" class="search__input" placeholder="Search Location">
+          <button class="search__button">
+            <svg
+              class="search__icon"
+              width="16"
+              height="16"
+              >
+              <use href="img/icons.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+
+        <a href="#" class="navbar-menu__link">All Deals</a>
+        <a href="#" class="navbar-menu__link">Hotels</a>
+        <a href="#" class="navbar-menu__link">Activities</a>
+        <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
+        <a href="#" class="navbar-menu__link">Restaurants</a>
+        <a href="#" class="navbar-menu__link">Events</a>
+        <a href="#" class="navbar-menu__link">Rodrigues</a>
+      </div>
+      <!-- /.container -->
     </nav>
     <!-- /.navbar-menu -->
   </header>
@@ -191,7 +210,8 @@
           </div>
           <!-- /.info__slider -->
           <div class="info__additional-container">
-            <form action="#" class="booking-form info__booking-form">
+            <!-- <form action="#" class="booking-form info__booking-form"> -->
+            <div class="booking-form info__booking-form">
               <div class="booking-form__price">
                 <span class="booking-form__price-starts">price starts as</span>
                 <span class="booking-form__price-summ">$ 8,500</span>
@@ -233,10 +253,12 @@
                   </svg>
                   12100
                 </a>
-                <button class="booking-form__button book-now">View Other Options</button>
               </div>
               <!-- /.booking-form__call -->
-            </form>
+              <button class="booking-form__button book-now">View Other Options</button>
+            </div>
+            <!-- /.booking-form -->
+              <!-- </form> -->
             <div class="info__map">
               <iframe class="info__map-iframe"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7905.090748660539!2d98.294612675272!3d7.8378438988566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x305025650c33dbab%3A0xa67a542329d011e1!2z0J_RhdGD0LrQtdGCLCDQmtCw0YDQvtC9LCDQntGC0LXQu9GMINCl0LjQu9GC0L7QvQ!5e0!3m2!1sru!2sru!4v1622013394943!5m2!1sru!2sru"
@@ -1152,7 +1174,7 @@
             class="other-activities__img"
           >
           <span class="other-activities__text">Tamarind falls hiking<br>trip - full day</span>
-          <button class="other-activities__button">Book Now</button>
+          <button class="other-activities__button book-now">Book Now</button>
         </div>
         <!-- /.other-activities__card -->
         <div class="other-activities__card">
