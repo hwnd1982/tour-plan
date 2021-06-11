@@ -24,7 +24,7 @@
     <div class="navbar-top">
       <div class="container navbar-top__container">
         <!-- Лого -->
-        <a href="#" class="logo">
+        <a href="index.php" class="logo">
           <img src="img/horizontal-logo.min.svg" alt="Logo: Best Tour Plan" class="logo__img">
         </a>
         <!-- Форма поиска -->
@@ -79,7 +79,7 @@
         <a href="#" class="navbar-menu__link">Hotels</a>
         <a href="activities.php" class="navbar-menu__link">Activities</a>
         <a href="#" class="navbar-menu__link">Hotel Day Packages</a>
-        <a href="#" class="navbar-menu__link">Restaurants</a>
+        <a href="restaurants.php" class="navbar-menu__link">Restaurants</a>
         <a href="#" class="navbar-menu__link">Events</a>
         <a href="#" class="navbar-menu__link">Rodrigues</a>
       </div>
