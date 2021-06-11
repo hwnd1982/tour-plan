@@ -1337,13 +1337,13 @@
         <!-- /.footer-contact__info -->
         <div class="footer-contact__form form">
           <span class="form__title">Send us a message</span>
-          <div class="form__input-bar">
-            <input type="text" class="form__name" placeholder="Your Full Name*">
-            <input type="text" class="form__phone" placeholder="Phone Number*">
-            <textarea name="Message" cols="30" rows="5" class="form__message" placeholder="Message"></textarea>
+          <form action="send.php" method="POST" class="form__input-bar">
+            <input type="text" class="form__name" placeholder="Your Full Name*" name="name">
+            <input type="text" class="form__phone" placeholder="Phone Number*" name="phone">
+            <textarea name="Message" cols="30" rows="5" class="form__message" placeholder="Message" name="message"></textarea>
             <button class="form__button">Send</button>
             <span class="form__note">* Required Fields</span>
-          </div>
+          </form>
           <!-- /.form__input-bar -->
         </div>
         <!-- /.footer-contact__form form -->
