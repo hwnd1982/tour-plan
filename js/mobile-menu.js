@@ -13,8 +13,7 @@ document.addEventListener("click", (event) => {
     mobileMenuNavbarMenu.classList.toggle('hidden')
     mobileMenuButton.classList.toggle('active')
     
-   if (window.innerWidth <= 767) {
-      
+    if (window.innerWidth <= 767) {
       let scrollBarWidth = window.visualViewport.width
       document.body.classList.toggle('lock')
       scrollBarWidth = window.visualViewport.width - scrollBarWidth
