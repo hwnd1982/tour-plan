@@ -785,8 +785,8 @@
           <h2 class="mailing__title">Newsletter</h2>
         </div>
         <!-- /.mailing__text -->
-        <form action="#" class="subscribe mailing__subscribe">
-          <input type="email" class="subscribe__input" placeholder="Your email address">
+        <form action="send.php" method="POST" class="subscribe mailing__subscribe">
+          <input type="email" class="subscribe__input" placeholder="Your email address" name="email">
           <button class="subscribe__button">Send</button>
         </form>
       </div>
@@ -1340,7 +1340,7 @@
           <form action="send.php" method="POST" class="form__input-bar">
             <input type="text" class="form__name" placeholder="Your Full Name*" name="name">
             <input type="text" class="form__phone" placeholder="Phone Number*" name="phone">
-            <textarea name="Message" cols="30" rows="5" class="form__message" placeholder="Message" name="message"></textarea>
+            <textarea cols="30" rows="5" class="form__message" placeholder="Message" name="message"></textarea>
             <button class="form__button">Send</button>
             <span class="form__note">* Required Fields</span>
           </form>
