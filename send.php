@@ -8,27 +8,39 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-
 $email = $_POST['email'];
 
-if (isset($_POST['email'])) {
+if (isset($_POST['email']) && !isset($_POST['name']) ) {
   // Формирование самого письма
   $title = "Новый подписчик Best Tour Plan";
   $body = "
   <h2>Подписка на рассылку</h2>
   <b>Электронная почта:</b> $email<br>
-  ";  
+  ";
+  $form="form=newsletter";
 }
 
 if (isset($_POST['name']) && isset($_POST['phone'])) {
   // Формирование самого письма
-  $title = "Новое обращение Best Tour Plan";
-  $body = "
-  <h2>Новое обращение</h2>
-  <b>Имя пользователя:</b> $name<br>
-  <b>Телефон:</b> $phone<br><br>
-  <b>Сообщение:</b><br>$message
-  ";
+  if (isset($_POST['email'])) {
+    $title = "Новое обращение Best Tour Plan";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя пользователя:</b> $name<br>
+    <b>Телефон:</b> $phone<br>
+    <b>Электронная почта:</b> $email<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+  } else {
+    $title = "Новое обращение Best Tour Plan";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя пользователя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+  }
+  $form="form=message";
 }
 
 
@@ -67,4 +79,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location: thankyou.html');
+header('Location: thankyou.php?' . $form);

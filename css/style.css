@@ -477,6 +477,7 @@ template {
   border: none;
   background-color: #ec1f46;
   cursor: pointer;
+  outline: none;
 }
 
 .search__icon {
@@ -680,6 +681,21 @@ template {
   height: 100%;
 }
 
+.info__button-home {
+  width: 295px;
+  background: #ec1f46;
+  padding: 13px 0;
+  margin-top: 15px;
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+  outline: none;
+}
+
 .booking-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -820,6 +836,7 @@ template {
   font-size: 14px;
   line-height: 19px;
   cursor: pointer;
+  outline: none;
 }
 
 .hotel-slider {
@@ -870,6 +887,7 @@ template {
   line-height: 0.8;
   fill: rgba(255, 255, 255, 0.8);
   cursor: pointer;
+  outline: none;
 }
 
 .hotel-slider__buttons:hover {
@@ -1150,6 +1168,7 @@ template {
   line-height: 19px;
   white-space: nowrap;
   cursor: pointer;
+  outline: none;
 }
 
 .review__container {
@@ -1203,6 +1222,7 @@ template {
   line-height: 0.8;
   fill: #828282;
   cursor: pointer;
+  outline: none;
 }
 
 .review-slider__buttons:hover {
@@ -1435,6 +1455,22 @@ template {
   line-height: 15px;
   border: none;
   outline: none;
+  color: #3e3e3e;
+}
+
+.subscribe__input::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.subscribe__input:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.subscribe__input::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.subscribe__input::placeholder {
   color: #bdbdbd;
 }
 
@@ -1535,6 +1571,7 @@ template {
   line-height: 16px;
   white-space: nowrap;
   cursor: pointer;
+  outline: none;
 }
 
 .other-activities__text {
@@ -1813,9 +1850,26 @@ template {
 
 .form__name, .form__phone {
   padding: 18px 23px;
-  color: #bdbdbd;
+  color: #3e3e3e;
   border: none;
   border-radius: 4px;
+  outline: none;
+}
+
+.form__name::-webkit-input-placeholder, .form__phone::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.form__name:-ms-input-placeholder, .form__phone:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.form__name::-ms-input-placeholder, .form__phone::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.form__name::placeholder, .form__phone::placeholder {
+  color: #bdbdbd;
 }
 
 .form__message {
@@ -1825,6 +1879,23 @@ template {
   resize: none;
   border: none;
   border-radius: 4px;
+  color: #3e3e3e;
+  outline: none;
+}
+
+.form__message::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.form__message:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.form__message::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.form__message::placeholder {
   color: #bdbdbd;
 }
 
@@ -1840,6 +1911,7 @@ template {
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
+  outline: none;
 }
 
 .form__note {
@@ -1915,10 +1987,27 @@ template {
 .modal-form__name, .modal-form__phone, .modal-form__email {
   grid-column: span 2;
   padding: 18px 23px 17px;
-  color: #bdbdbd;
   border: none;
   border-radius: 4px;
   line-height: 15px;
+  color: #3e3e3e;
+  outline: none;
+}
+
+.modal-form__name::-webkit-input-placeholder, .modal-form__phone::-webkit-input-placeholder, .modal-form__email::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.modal-form__name:-ms-input-placeholder, .modal-form__phone:-ms-input-placeholder, .modal-form__email:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.modal-form__name::-ms-input-placeholder, .modal-form__phone::-ms-input-placeholder, .modal-form__email::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.modal-form__name::placeholder, .modal-form__phone::placeholder, .modal-form__email::placeholder {
+  color: #bdbdbd;
 }
 
 .modal-form__message {
@@ -1929,6 +2018,23 @@ template {
   border: none;
   height: 123px;
   border-radius: 4px;
+  color: #3e3e3e;
+  outline: none;
+}
+
+.modal-form__message::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+.modal-form__message:-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.modal-form__message::-ms-input-placeholder {
+  color: #bdbdbd;
+}
+
+.modal-form__message::placeholder {
   color: #bdbdbd;
 }
 
@@ -1941,6 +2047,7 @@ template {
   border-radius: 4px;
   color: #ffffff;
   line-height: 15px;
+  outline: none;
 }
 
 .modal-form__note {
@@ -2251,6 +2358,7 @@ template {
     cursor: pointer;
     border: none;
     background-color: #ffffff;
+    outline: none;
   }
   .navbar .menu-button__line {
     position: absolute;

@@ -42,10 +42,13 @@
   &__name, &__phone, &__email
     grid-column: span 2
     padding: 18px 23px 17px
-    color: $link-color
     border: none
     border-radius: 4px
     line-height: 15px
+    color: darken($link-color, 50%)
+    outline: none
+    &::placeholder
+      color: $link-color
   &__message
     grid-column: span 2
     padding: 18px 23px
@@ -54,7 +57,10 @@
     border: none
     height: 123px
     border-radius: 4px
-    color: $link-color
+    color: darken($link-color, 50%)
+    outline: none
+    &::placeholder
+      color: $link-color
   &__button
     grid-column: 1
     background-color: $primery
@@ -63,6 +69,7 @@
     border-radius: 4px
     color: $alt-text-color
     line-height: 15px
+    outline: none
   &__note
     grid-column: 2
     color: #e0e0e0

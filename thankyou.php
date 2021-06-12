@@ -95,19 +95,29 @@
         <span class="nav-tree__divider"> / </span>
         <a href="#" class="nav-tree__link">Grand Hilton Hotel</a>
       </nav>
-
-      <div class="info hotel__info">
+      <?php
+      $form= $_GET['form'];
+      if ($form == 'message') {
+        $title = ' Your message sent successfully!';
+        $message = 'Our manager will call you in 5 minutes.' ;
+      }
+      if ($form == 'newsletter') {
+        $title = 'Subscription successful!';
+        $message = 'You won’t miss anyone of interesting offer.' ;
+      }
+      ?>
+      <div class="info">
         <div class="info__text-container">
-          <div class="info__text-group">
-            <!-- /.info__rating -->
-            <h1 class="info__name">Сообщение отправлено!</h1>
+          <form action="index.html" class="info__text-group">
+            <h1 class="info__name"><?php  echo $title ?></h1>
             <div class="info__tags">
               <p class="info__options">
-                Наш менеджер позвонит вам через 5 минут.
+                <?php  echo $message ?>
               </p>
             </div>
             <!-- /.info__tags -->
-          </div>
+            <button class="info__button-home">Return To Home Page</button>
+          </form>
           <!-- /.info__text-group -->
         </div>
         <!-- /.info__text-container -->
@@ -120,7 +130,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <a href="#" class="footer-top__logo logo-vertical">
+        <a href="index.html" class="footer-top__logo logo-vertical">
           <img
             src="img/vertical-logo.svg"
             alt="Logo: Best Tour Plan"

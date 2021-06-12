@@ -1364,15 +1364,15 @@
   <div class="modal hidden">
     <div class="modal__overlay">
       <div class="modal__wrapper">
-        <div class="modal__form modal-form">
+        <form action="send.php" method="POST" class="modal__form modal-form">
           <span class="modal-form__title">Booking</span>
-          <input type="text" class="modal-form__name" placeholder="Your Full Name*">
-          <input type="text" class="modal-form__phone" placeholder="Phone Number*">
-          <input type="text" class="modal-form__email" placeholder="Email*">
-          <textarea name="Message" cols="30" rows="5" class="modal-form__message" placeholder="Message"></textarea>
+          <input type="text" class="modal-form__name" placeholder="Your Full Name*" name="name">
+          <input type="text" class="modal-form__phone" placeholder="Phone Number*" name="phone">
+          <input type="text" class="modal-form__email" placeholder="Email*" name="email">
+          <textarea cols="30" rows="5" class="modal-form__message" placeholder="Message" name="message"></textarea>
           <button class="modal-form__button">Send</button>
           <span class="modal-form__note">* Required Fields</span>
-        </div>
+        </form>
         <!-- /.modal__form modal-form -->
         <button class="modal__button-close">
           <svg
@@ -1387,7 +1387,7 @@
       <!-- /.modal__wrapper -->
     </div>
     <!-- /.modal__overlay -->
-  </div>
+  </div>>
   <!-- /.modal -->
 </body>
 </html>
