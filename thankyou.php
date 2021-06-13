@@ -108,7 +108,7 @@
       ?>
       <div class="info">
         <div class="info__text-container">
-          <form action="index.html" class="info__text-group">
+          <div class="info__text-group">
             <h1 class="info__name"><?php  echo $title ?></h1>
             <div class="info__tags">
               <p class="info__options">
@@ -116,8 +116,8 @@
               </p>
             </div>
             <!-- /.info__tags -->
-            <button class="info__button-home">Return To Home Page</button>
-          </form>
+            <a href="index.html" class="info__button-home">Return To Home Page</a>
+          </div>
           <!-- /.info__text-group -->
         </div>
         <!-- /.info__text-container -->

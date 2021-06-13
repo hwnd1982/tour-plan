@@ -682,18 +682,18 @@ template {
 }
 
 .info__button-home {
-  width: 295px;
+  width: 280px;
   background: #ec1f46;
   padding: 13px 0;
   margin-top: 15px;
   border-radius: 4px;
-  border: none;
   color: #ffffff;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
-  outline: none;
 }
 
 .booking-form {

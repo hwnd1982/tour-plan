@@ -79,4 +79,5 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location: thankyou.php?' . $form);
+if (isset($form)) header('Location: thankyou.php?' . $form);
+else header('Location: index.html');
