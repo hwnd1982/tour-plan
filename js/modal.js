@@ -27,3 +27,15 @@ document.addEventListener("click", (event) => {
     }
   }
 });
+
+document.addEventListener('keydown', (event) => {
+  if (event.code == 'Escape') {
+    modalDialog.classList.add('hidden')
+    document.body.classList.remove('lock')
+    document.body.style.setProperty('margin-right', 0)
+    if (window.innerWidth <= 767) {
+      const navbarTop = document.querySelector('.navbar-top')
+      navbarTop.style.setProperty('padding-right', 0)
+    }
+  }
+});
