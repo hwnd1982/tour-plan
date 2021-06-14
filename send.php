@@ -17,7 +17,7 @@ if (isset($_POST['email']) && !isset($_POST['name']) ) {
   <h2>Подписка на рассылку</h2>
   <b>Электронная почта:</b> $email<br>
   ";
-  $form="form=newsletter";
+  $location = 'Location: newsletter.php';
 }
 
 if (isset($_POST['name']) && isset($_POST['phone'])) {
@@ -40,7 +40,7 @@ if (isset($_POST['name']) && isset($_POST['phone'])) {
     <b>Сообщение:</b><br>$message
     ";
   }
-  $form="form=message";
+  $location = 'Location: thankyou.php';
 }
 
 
@@ -79,5 +79,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-if (isset($form)) header('Location: thankyou.php?' . $form);
-else header('Location: index.html');
+header($location);

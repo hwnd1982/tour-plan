@@ -502,3 +502,26 @@
         &:nth-child(2)
           grid-column: 1
           grid-row: 5
+  .modal
+    &__button-close
+      position: absolute
+      top: 17px
+      right: 17px
+      width: 14px
+      height: 13px
+    &__icon-close
+      width: 14px
+      height: 14px
+@media (max-height: 542px)
+  .modal
+    &__wrapper
+      max-height: 90vh
+      padding-top: 6vh
+      padding-bottom: 6vh
+    &-form
+      max-height: 78vh
+      overflow: auto
+      scrollbar-width: none
+      &::-webkit-scrollbar
+        width: 0px
+        background: transparent

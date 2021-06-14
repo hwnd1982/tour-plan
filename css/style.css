@@ -2800,5 +2800,33 @@ template {
     -ms-grid-row: 5;
     grid-row: 5;
   }
+  .modal__button-close {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+    width: 14px;
+    height: 13px;
+  }
+  .modal__icon-close {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-height: 542px) {
+  .modal__wrapper {
+    max-height: 90vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+  }
+  .modal-form {
+    max-height: 78vh;
+    overflow: auto;
+    scrollbar-width: none;
+  }
+  .modal-form::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
 }
 /*# sourceMappingURL=style.css.map */
