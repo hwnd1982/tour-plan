@@ -1,11 +1,3 @@
-const childOf = (childElem, className) => {
-  while(!childElem.classList.contains(className)) {
-    childElem = childElem.parentNode 
-    if (childElem === document.body) return false
-  }
-  return childElem; 
-}
-
 document.addEventListener("click", (event) => {
 
   if (window.innerWidth >= 767 ) {

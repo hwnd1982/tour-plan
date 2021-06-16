@@ -1,5 +1,13 @@
 const modalDialog = document.querySelector('.modal');
 
+const childOf = (childElem, className) => {
+  while(!childElem.classList.contains(className)) {
+    childElem = childElem.parentNode 
+    if (childElem === document.body) return false
+  }
+  return childElem; 
+}
+
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains('book-now')) {
     modalDialog.classList.remove('hidden')
