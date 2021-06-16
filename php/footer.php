@@ -8,11 +8,11 @@
     </div>
     <!-- /.container -->
   </section>
-  <!-- Подвал -->
+    <!-- Подвал -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <a href="index.html" class="footer-top__logo logo-vertical">
+        <a href="#" class="footer-top__logo logo-vertical">
           <img
             src="img/vertical-logo.svg"
             alt="Logo: Best Tour Plan"
@@ -151,16 +151,36 @@
           <!-- /.footer-contact__info -->
         </div>
         <!-- /.footer-contact__info -->
-        <div class="footer-contact__form form">
-          <span class="form__title">Send us a message</span>
-          <form action="send.php" method="POST" class="form__input-bar">
-            <input type="text" class="form__name" placeholder="Your Full Name*" name="name">
-            <input type="text" class="form__phone" placeholder="Phone Number*" name="phone">
-            <textarea name="Message" cols="30" rows="5" class="form__message" placeholder="Message" name="message"></textarea>
-            <button class="form__button">Send</button>
-            <span class="form__note">* Required Fields</span>
+        <div class="footer-contact__form footer-form">
+          <span class="footer-form__title">Send us a message</span>
+          <form action="send.php" method="POST" class="footer-form__input-bar form">
+            <div class="footer-form__input-group">
+              <input
+                type="text"
+                class="footer-form__name"
+                placeholder="Your Full Name*"
+                required
+                minlength="2"
+                name="name"
+              >
+            </div>
+            <!-- /.footer-form__input-group -->
+            <div class="footer-form__input-group">
+              <input
+                type="tel"
+                class="footer-form__phone phone_us"
+                placeholder="Phone Number*"
+                required
+                minlength="18"
+                name="phone"
+              >
+            </div>
+            <!-- /.footer-form__input-group -->
+
+            <textarea cols="30" rows="5" class="footer-form__message" placeholder="Message" name="message"></textarea>
+            <button class="footer-form__button">Send</button>
+            <span class="footer-form__note">* Required Fields</span>
           </form>
-          <!-- /.form__input-bar -->
         </div>
         <!-- /.footer-contact__form form -->
       </div>
@@ -177,5 +197,63 @@
     </div>
     <!-- /.container -->
   </footer>
+  <div class="modal hidden">
+    <div class="modal__overlay">
+      <div class="modal__wrapper">
+        <form action="send.php" method="POST" class="modal__form modal-form form">
+          <span class="modal-form__title">Booking</span>
+          <div class="modal-form__input-group">
+            <input
+              type="text"
+              class="modal-form__name"
+              placeholder="Your Full Name*"
+              required
+              minlength="2"
+              name="name"
+            >
+          </div>
+          <!-- /.modal-form__input__group -->
+          <div class="modal-form__input-group">
+            <input
+              type="tel"
+              class="modal-form__phone phone_us"
+              placeholder="Phone Number*"
+              required
+              minlength="18"
+              name="phone"
+            >
+          </div>
+          <!-- /.modal-form__input__group -->
+          <div class="modal-form__input-group">
+            <input
+              type="email"
+              class="modal-form__email"
+              placeholder="Email*"
+              required
+              name="email"
+            >
+          </div>
+          <!-- /.modal-form__input__group -->
+
+          <textarea cols="30" rows="5" class="modal-form__message" placeholder="Message" name="message"></textarea>
+          <button class="modal-form__button">Send</button>
+          <span class="modal-form__note">* Required Fields</span>
+        </form>
+        <!-- /.modal__form modal-form -->
+        <button class="modal__button-close">
+          <svg
+            class="modal__icon-close"
+            width="17"
+            height="16"
+          >
+            <use href="img/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- /.modal__wrapper -->
+    </div>
+    <!-- /.modal__overlay -->
+  </div>
+  <!-- /.modal -->
 </body>
 </html>

@@ -24,7 +24,11 @@ img {
 
 .invalid {
   color: #ec1f46;
-  border-bottom: 1px solid #ec1f46;
+}
+
+.invalid-container label {
+  font-size: 12px;
+  line-height: 15px;
 }
 
 .rating-bar {
@@ -1493,7 +1497,6 @@ template {
 
 .subscribe__input.invalid {
   color: #ec1f46;
-  border-bottom: 1px solid #ec1f46;
 }
 
 .subscribe__input.invalid::-webkit-input-placeholder {
@@ -1510,11 +1513,6 @@ template {
 
 .subscribe__input.invalid::placeholder {
   color: #f8acba;
-}
-
-.subscribe__invalid-container label {
-  font-size: 12px;
-  line-height: 15px;
 }
 
 .subscribe__button {
@@ -1918,6 +1916,26 @@ template {
   color: #bdbdbd;
 }
 
+.footer-form__name.invalid, .footer-form__phone.invalid {
+  color: #ec1f46;
+}
+
+.footer-form__name.invalid::-webkit-input-placeholder, .footer-form__phone.invalid::-webkit-input-placeholder {
+  color: #f8acba;
+}
+
+.footer-form__name.invalid:-ms-input-placeholder, .footer-form__phone.invalid:-ms-input-placeholder {
+  color: #f8acba;
+}
+
+.footer-form__name.invalid::-ms-input-placeholder, .footer-form__phone.invalid::-ms-input-placeholder {
+  color: #f8acba;
+}
+
+.footer-form__name.invalid::placeholder, .footer-form__phone.invalid::placeholder {
+  color: #f8acba;
+}
+
 .footer-form__message {
   grid-column: span 2;
   padding: 18px 23px;
@@ -2062,7 +2080,6 @@ template {
 
 .modal-form__name.invalid, .modal-form__phone.invalid, .modal-form__email.invalid {
   color: #ec1f46;
-  border-bottom: 1px solid #ec1f46;
 }
 
 .modal-form__name.invalid::-webkit-input-placeholder, .modal-form__phone.invalid::-webkit-input-placeholder, .modal-form__email.invalid::-webkit-input-placeholder {

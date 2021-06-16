@@ -149,6 +149,10 @@
     outline: none
     &::placeholder
       color: $link-color
+    &.invalid
+      color: $primery
+      &::placeholder
+        color: lighten($primery, 30%)
   &__message
     grid-column: span 2
     padding: 18px 23px
