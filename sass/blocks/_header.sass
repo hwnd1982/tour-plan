@@ -11,11 +11,16 @@
       display: none
   &__user
     display: flex
-  &__search
+  &__input-group
     display: flex
     flex-direction: column
     margin-right: auto
     margin-left: 108px
+  &__search
+    // display: flex
+    // flex-direction: column
+    // margin-right: auto
+    // margin-left: 108px
   &-menu
     background-color: $additional
     &__container
@@ -52,6 +57,11 @@
     border: none
     outline: none
     color: $text-color
+    &.invalid
+      color: $primery
+      border-bottom: 1px solid #ec1f46
+      &::placeholder
+        color: lighten($primery, 30%)
   &__button
     position: absolute
     top: 0

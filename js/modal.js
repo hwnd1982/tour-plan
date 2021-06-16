@@ -27,9 +27,13 @@ document.addEventListener("click", (event) => {
   }
   // Обработка форм
   $('.form').each( function () {
-    if ($(this).hasClass("subscribe"))
+    
+    if ($(this).hasClass("single-field")) {
+      if ($(this).hasClass("search")) var subClass = 'navbar'
+      if ($(this).hasClass("subscribe")) var subClass = 'subscribe'
+
       $(this).validate({
-        errorLabelContainer: $('.subscribe__invalid-container'),
+        errorLabelContainer: $('.' + subClass + '__invalid-container'),
         errorClass: "invalid",
         rules: {
           email: {
@@ -45,6 +49,7 @@ document.addEventListener("click", (event) => {
           }
         }
       })
+    } 
     else 
       $(this).validate({
       errorClass: "invalid",
