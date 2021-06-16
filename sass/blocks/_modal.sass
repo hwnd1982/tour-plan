@@ -39,8 +39,10 @@
     line-height: 23px
     text-transform: uppercase
     color: $alt-text-color
-  &__name, &__phone, &__email
+  &__input-group
     grid-column: span 2
+  &__name, &__phone, &__email
+    width: 100%
     padding: 18px 23px 17px
     border: none
     border-radius: 4px
@@ -49,6 +51,11 @@
     outline: none
     &::placeholder
       color: $link-color
+    &.invalid
+      color: $primery
+      border-bottom: 1px solid $primery
+      &::placeholder
+        color: lighten($primery, 30%)
   &__message
     grid-column: span 2
     padding: 18px 23px

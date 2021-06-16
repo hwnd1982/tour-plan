@@ -121,7 +121,7 @@
     color: $link-color
     text-decoration: none
     cursor: pointer
-.form
+.footer-form
   width: 539px
   grid-column: 3
   &__title
@@ -137,10 +137,11 @@
     height: 260px
     column-gap: 30px
     row-gap: 15px
-    grid-template: 50px 123px 1fr / 0.5fr 0.5fr
+    grid-template: min-content 123px 1fr / 0.5fr 0.5fr
     font-size: 12px
     line-height: 15px
   &__name, &__phone
+    width: 100%
     padding: 18px 23px
     color: darken($link-color, 50%)
     border: none

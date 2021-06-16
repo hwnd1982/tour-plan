@@ -28,14 +28,17 @@
     font-size: 36px
     line-height: 45px
     text-transform: uppercase
+  &__input-group
+    width: 350px
 .subscribe
   display: flex
+  flex-direction: column
   position: relative
   overflow: hidden
   height: 55px
   border-radius: 6px
   &__input
-    width: 350px
+    width: 100%
     height: 100%
     padding-left: 23px
     padding-right: 75px
@@ -47,6 +50,15 @@
     color: darken($link-color, 50%)
     &::placeholder
       color: $link-color
+    &.invalid
+      color: $primery
+      border-bottom: 1px solid #ec1f46
+      &::placeholder
+        color: lighten($primery, 30%)
+  &__invalid-container
+    & label
+      font-size: 12px
+      line-height: 15px
   &__button
     position: absolute
     top: 0

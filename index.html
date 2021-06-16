@@ -15,6 +15,9 @@
   <script src="js/package-toggle.js" defer></script>
   <script src="js/mobile-menu.js" defer></script>
   <script src="js/modal.js" defer></script>
+  <script src="js/jquery-3.6.0.min.js" defer></script>
+  <script src="js/jquery.validate.min.js" defer></script>
+  <script src="js/jquery.mask.min.js" defer></script>
   <title>Best Tour Plan - Hotel Booking </title>
 </head>
 
@@ -29,7 +32,7 @@
         </a>
         <!-- Форма поиска -->
         <form action="#" class="search navbar__search">
-          <input type="search" class="search__input" placeholder="Search Location">
+          <input type="search" class="search__input" placeholder="Search Location" name="search">
           <button class="search__button">
             <svg
               class="search__icon"
@@ -63,7 +66,7 @@
         </a> 
         <!-- Форма поиска -->
         <form action="#" class="search navbar-menu__search hidden">
-          <input type="search" class="search__input" placeholder="Search Location">
+          <input type="search" class="search__input" placeholder="Search Location" name="search">
           <button class="search__button">
             <svg
               class="search__icon"
@@ -210,7 +213,6 @@
           </div>
           <!-- /.info__slider -->
           <div class="info__additional-container">
-            <!-- <form action="#" class="booking-form info__booking-form"> -->
             <div class="booking-form info__booking-form">
               <div class="booking-form__price">
                 <span class="booking-form__price-starts">price starts as</span>
@@ -780,15 +782,30 @@
   <!-- Рассылка -->
   <section class="mailing">
       <div class="container mailing__container">
-        <div class="mailing__text">
+        <div class="mailing__text" for="customer">
           <span class="mailing__subtitle">subscribe to our</span>
           <h2 class="mailing__title">Newsletter</h2>
         </div>
         <!-- /.mailing__text -->
-        <form action="send.php" method="POST" class="subscribe mailing__subscribe">
-          <input type="email" class="subscribe__input" placeholder="Your email address" name="email">
-          <button class="subscribe__button">Send</button>
-        </form>
+        <div class="mailing__input-group">
+          <form
+            action="send.php"
+            method="POST"
+            class="subscribe mailing__subscribe form single-field"
+          >
+            <input
+              type="email"
+              class="subscribe__input"
+              placeholder="Your email address"
+              required
+              name="email"
+            >
+            <button class="subscribe__button">Send</button>
+          </form>
+          <div class="subscribe__invalid-container invalid-container"></div>
+          <!-- /.subscribe__invalid-container -->
+        </div>
+        <!-- /.mailing__input-group -->
       </div>
       <!-- /.mailing__container -->
   </section>
@@ -1335,16 +1352,36 @@
           <!-- /.footer-contact__info -->
         </div>
         <!-- /.footer-contact__info -->
-        <div class="footer-contact__form form">
-          <span class="form__title">Send us a message</span>
-          <form action="send.php" method="POST" class="form__input-bar">
-            <input type="text" class="form__name" placeholder="Your Full Name*" name="name">
-            <input type="text" class="form__phone" placeholder="Phone Number*" name="phone">
-            <textarea cols="30" rows="5" class="form__message" placeholder="Message" name="message"></textarea>
-            <button class="form__button">Send</button>
-            <span class="form__note">* Required Fields</span>
+        <div class="footer-contact__form footer-form">
+          <span class="footer-form__title">Send us a message</span>
+          <form action="send.php" method="POST" class="footer-form__input-bar form">
+            <div class="footer-form__input-group">
+              <input
+                type="text"
+                class="footer-form__name"
+                placeholder="Your Full Name*"
+                required
+                minlength="2"
+                name="name"
+              >
+            </div>
+            <!-- /.footer-form__input-group -->
+            <div class="footer-form__input-group">
+              <input
+                type="tel"
+                class="footer-form__phone phone_us"
+                placeholder="Phone Number*"
+                required
+                minlength="18"
+                name="phone"
+              >
+            </div>
+            <!-- /.footer-form__input-group -->
+
+            <textarea cols="30" rows="5" class="footer-form__message" placeholder="Message" name="message"></textarea>
+            <button class="footer-form__button">Send</button>
+            <span class="footer-form__note">* Required Fields</span>
           </form>
-          <!-- /.form__input-bar -->
         </div>
         <!-- /.footer-contact__form form -->
       </div>
@@ -1364,11 +1401,41 @@
   <div class="modal hidden">
     <div class="modal__overlay">
       <div class="modal__wrapper">
-        <form action="send.php" method="POST" class="modal__form modal-form">
+        <form action="send.php" method="POST" class="modal__form modal-form form">
           <span class="modal-form__title">Booking</span>
-          <input type="text" class="modal-form__name" placeholder="Your Full Name*" name="name">
-          <input type="text" class="modal-form__phone" placeholder="Phone Number*" name="phone">
-          <input type="text" class="modal-form__email" placeholder="Email*" name="email">
+          <div class="modal-form__input-group">
+            <input
+              type="text"
+              class="modal-form__name"
+              placeholder="Your Full Name*"
+              required
+              minlength="2"
+              name="name"
+            >
+          </div>
+          <!-- /.modal-form__input__group -->
+          <div class="modal-form__input-group">
+            <input
+              type="tel"
+              class="modal-form__phone phone_us"
+              placeholder="Phone Number*"
+              required
+              minlength="18"
+              name="phone"
+            >
+          </div>
+          <!-- /.modal-form__input__group -->
+          <div class="modal-form__input-group">
+            <input
+              type="email"
+              class="modal-form__email"
+              placeholder="Email*"
+              required
+              name="email"
+            >
+          </div>
+          <!-- /.modal-form__input__group -->
+                    
           <textarea cols="30" rows="5" class="modal-form__message" placeholder="Message" name="message"></textarea>
           <button class="modal-form__button">Send</button>
           <span class="modal-form__note">* Required Fields</span>
@@ -1387,7 +1454,7 @@
       <!-- /.modal__wrapper -->
     </div>
     <!-- /.modal__overlay -->
-  </div>>
+  </div>
   <!-- /.modal -->
 </body>
 </html>
