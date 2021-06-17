@@ -37,7 +37,7 @@ document.addEventListener("click", (event) => {
   $('.form').each( function () {
     if ($(this).hasClass("subscribe"))
       $(this).validate({
-        errorLabelContainer: $('.subscribe__invalid-container'),
+        errorLabelContainer: $('.mailing__invalid-container'),
         errorClass: "invalid",
         rules: {
           email: {
@@ -82,7 +82,7 @@ document.addEventListener("click", (event) => {
   })
 
   $(document).ready(function(){
-    $('.phone_us').mask('+7 (000) 000-00-00');
+    $('.phone').mask('+7 (000) 000-00-00');
   })
 
 });
