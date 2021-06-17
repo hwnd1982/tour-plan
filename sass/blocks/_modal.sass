@@ -9,7 +9,11 @@
     background: rgba(0, 143, 223, 0.39)
   &__wrapper
     position: absolute
-    padding: 33px 88px
+    display: flex
+    align-items: center
+    padding: 0 88px
+    max-height: 487px
+    height: 90vh
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
@@ -28,9 +32,16 @@
     display: none
 .modal-form
   display: grid
+  max-height: 421px
+  height: 78vh
+  overflow: auto
+  scrollbar-width: none
   row-gap: 15px
   grid-template: repeat( 6, min-content) / 160px 142px
   font-size: 12px
+  &::-webkit-scrollbar
+    width: 0px
+    background: transparent
   &__title
     grid-column: span 2
     justify-self: center
@@ -81,3 +92,7 @@
     color: #e0e0e0
     align-self: center
     justify-self: end
+
+  // @media (max-height: 645px)
+
+  //   &-form

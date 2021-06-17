@@ -462,8 +462,10 @@
       padding-bottom: 110px
   .modal
     &__wrapper
-      padding: 33px 12.5vw
+      padding: 0 12.5vw
+      max-height: 485px
   .modal-form
+    max-height: 449px
     grid-template: repeat( 7, min-content) / 302px
     &__button
       order: 7
@@ -513,16 +515,3 @@
     &__icon-close
       width: 14px
       height: 14px
-@media (max-height: 645px)
-  .modal
-    &__wrapper
-      max-height: 90vh
-      padding-top: 6vh
-      padding-bottom: 6vh
-    &-form
-      max-height: 78vh
-      overflow: auto
-      scrollbar-width: none
-      &::-webkit-scrollbar
-        width: 0px
-        background: transparent

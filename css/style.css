@@ -1999,7 +1999,15 @@ template {
 
 .modal__wrapper {
   position: absolute;
-  padding: 33px 88px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 88px;
+  max-height: 487px;
+  height: 90vh;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2028,6 +2036,10 @@ template {
 .modal-form {
   display: -ms-grid;
   display: grid;
+  max-height: 421px;
+  height: 78vh;
+  overflow: auto;
+  scrollbar-width: none;
   row-gap: 15px;
   -ms-grid-rows: (-webkit-min-content)[6];
   -ms-grid-rows: (min-content)[6];
@@ -2035,6 +2047,11 @@ template {
       grid-template: repeat(6, -webkit-min-content)/160px 142px;
       grid-template: repeat(6, min-content)/160px 142px;
   font-size: 12px;
+}
+
+.modal-form::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 .modal-form__title {
@@ -2814,9 +2831,11 @@ template {
     padding-bottom: 110px;
   }
   .modal__wrapper {
-    padding: 33px 12.5vw;
+    padding: 0 12.5vw;
+    max-height: 485px;
   }
   .modal-form {
+    max-height: 449px;
     -ms-grid-rows: (-webkit-min-content)[7];
     -ms-grid-rows: (min-content)[7];
     -ms-grid-columns: 302px;
@@ -2901,23 +2920,6 @@ template {
   .modal__icon-close {
     width: 14px;
     height: 14px;
-  }
-}
-
-@media (max-height: 645px) {
-  .modal__wrapper {
-    max-height: 90vh;
-    padding-top: 6vh;
-    padding-bottom: 6vh;
-  }
-  .modal-form {
-    max-height: 78vh;
-    overflow: auto;
-    scrollbar-width: none;
-  }
-  .modal-form::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
   }
 }
 /*# sourceMappingURL=style.css.map */
