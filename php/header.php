@@ -15,6 +15,7 @@
   <script src="js/jquery-3.6.0.min.js" defer></script>
   <script src="js/jquery.validate.min.js" defer></script>
   <script src="js/jquery.mask.min.js" defer></script>
+  <script src="js/animation.js" defer></script>
   <title>Best Tour Plan - Hotel Booking </title>
 </head>
 

@@ -79,12 +79,14 @@ document.addEventListener("click", (event) => {
         }
       }
     })
+    const subscribeForm = document.querySelector(".subscribe")
+    if (!subscribeForm.firstElementChild.checkValidity())
+        subscribeForm.lastElementChild.classList.add("invalid")
   })
 
   $(document).ready(function(){
     $('.phone').mask('+7 (000) 000-00-00');
-  })
-
+  })  
 });
 
 document.addEventListener('keydown', (event) => {
