@@ -465,6 +465,10 @@ template {
   width: 177px;
 }
 
+.logo__img {
+  width: 100%;
+}
+
 .search {
   position: relative;
   overflow: hidden;
@@ -1404,7 +1408,7 @@ template {
 .mailing {
   width: 100%;
   background-blend-mode: multiply;
-  background-image: url(../img/newsletter-bg.jpg);
+  background-image: url(../img/newsletter-bg.webp);
   background-color: rgba(10, 34, 61, 0.8);
   background-size: 100% auto;
   background-position-x: center;

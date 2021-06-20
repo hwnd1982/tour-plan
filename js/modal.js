@@ -80,7 +80,8 @@ document.addEventListener("click", (event) => {
       }
     })
     const subscribeForm = document.querySelector(".subscribe")
-    if (!subscribeForm.firstElementChild.checkValidity())
+    if (childOf(event.target, 'subscribe'))
+      if (!subscribeForm.firstElementChild.checkValidity())
         subscribeForm.lastElementChild.classList.add("invalid")
   })
 
