@@ -37,6 +37,7 @@
 .logo
   &__img
     width: 177px
+    height: 17px
 .search
   position: relative
   overflow: hidden
@@ -66,8 +67,11 @@
   &__icon
     fill: $alt-text-color
 .user
+  position: relative
   align-items: center
   text-decoration: none
+  color: $text-color
+  z-index: 1
   &__avatar
     width: 40px
     height: 40px
@@ -76,5 +80,5 @@
   &__name
     font-size: 14px
     line-height: 18px
-    color: $text-color
+    color: inherit
     margin-left: 18px

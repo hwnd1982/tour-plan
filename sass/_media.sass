@@ -40,6 +40,7 @@
   .logo
     &__img
       width: 132px
+      height: 13px
   .navbar
     &-top
       &__container
@@ -127,6 +128,53 @@
     width: 539px
     grid-column: 1
 @media (min-width: 992px)
+  .navbar
+    &-menu
+      &__link
+        &::after
+          background-color: $alt-text-color
+          display: block
+          content: ""
+          height: 1px
+          width: 0
+          transition: width 0.3s ease-in-out
+        &:hover, &:focus
+          &::after
+            width: 100%
+  .user
+    transition: 0.2s ease-in-out
+    &::after
+      position: absolute
+      top: 0
+      left: 0
+      content: ""
+      width: 40px
+      height: 40px
+      background-color: $link-color
+      border-radius: 50%
+      z-index: -1
+    &:hover
+      transform: translate(-2px, -2px)
+      text-shadow: 3px 3px 2px $link-color
+      &::after
+        box-shadow: 3px 3px 8px 0px rgba(34, 60, 80, 0.2)
+  .nav-tree
+    &__link
+      &::after
+        background-color: $text-color
+        display: block
+        content: ""
+        height: 1px
+        width: 0%
+        transition: width 0.3s ease-in-out
+      &:hover::after
+        width: 100%
+  .booking-form
+    &__call
+      &-num
+        transition: 0.2s ease-in-out
+      &:hover
+        transform: scale(1.1)
   .footer
     &-contact
       &__link
@@ -460,8 +508,9 @@
   .mailing
     background-size: 700% auto
   .logo
-    line-height: 14px
-    width: 99px
+    &__img
+      width: 99px
+      height: 10px
   .navbar
     &-menu
       top: 70px
