@@ -8,15 +8,18 @@
     </div>
     <!-- /.container -->
   </section>
-    <!-- Подвал -->
+  <!-- Подвал -->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
         <a href="#" class="footer-top__logo logo-vertical">
           <img
-            src="img/vertical-logo.svg"
+            src="img/vertical-logo.min.svg"
             alt="Logo: Best Tour Plan"
-            class="logo-vertical__img"
+            class="logo-vertical__img animated"
+            animation-type="scale" 
+            animation-data="scale"
+            animation-delay="0"
           >
         </a>
         <nav class="footer-top__menu nav-menu">
@@ -168,7 +171,7 @@
             <div class="footer-form__input-group">
               <input
                 type="tel"
-                class="footer-form__phone phone_us"
+                class="footer-form__phone phone"
                 placeholder="Phone Number*"
                 required
                 minlength="18"
@@ -191,69 +194,11 @@
           <a href="#" class="footer-bottom__link">Conditions of use</a>
           <a href="#" class="footer-bottom__link">Cancellation policy</a>
         </div>
-        <img src="img/payment-icons.png" alt="" class="footer-bottom__payment">
+        <img src="img/payment-icons.webp" alt="" class="footer-bottom__payment">
       </div>
       <!-- /.footer-bottom -->
     </div>
     <!-- /.container -->
   </footer>
-  <div class="modal hidden">
-    <div class="modal__overlay">
-      <div class="modal__wrapper">
-        <form action="send.php" method="POST" class="modal__form modal-form form">
-          <span class="modal-form__title">Booking</span>
-          <div class="modal-form__input-group">
-            <input
-              type="text"
-              class="modal-form__name"
-              placeholder="Your Full Name*"
-              required
-              minlength="2"
-              name="name"
-            >
-          </div>
-          <!-- /.modal-form__input__group -->
-          <div class="modal-form__input-group">
-            <input
-              type="tel"
-              class="modal-form__phone phone_us"
-              placeholder="Phone Number*"
-              required
-              minlength="18"
-              name="phone"
-            >
-          </div>
-          <!-- /.modal-form__input__group -->
-          <div class="modal-form__input-group">
-            <input
-              type="email"
-              class="modal-form__email"
-              placeholder="Email*"
-              required
-              name="email"
-            >
-          </div>
-          <!-- /.modal-form__input__group -->
-
-          <textarea cols="30" rows="5" class="modal-form__message" placeholder="Message" name="message"></textarea>
-          <button class="modal-form__button">Send</button>
-          <span class="modal-form__note">* Required Fields</span>
-        </form>
-        <!-- /.modal__form modal-form -->
-        <button class="modal__button-close">
-          <svg
-            class="modal__icon-close"
-            width="17"
-            height="16"
-          >
-            <use href="img/icons.svg#close"></use>
-          </svg>
-        </button>
-      </div>
-      <!-- /.modal__wrapper -->
-    </div>
-    <!-- /.modal__overlay -->
-  </div>
-  <!-- /.modal -->
 </body>
 </html>

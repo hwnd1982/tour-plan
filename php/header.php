@@ -5,10 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
-    rel="stylesheet"
-  />
+
   <link rel="stylesheet" href="css/style.css">
   <script src="js/mobile-menu.js" defer></script>
   <script src="js/modal.js" defer></script>
@@ -41,9 +38,9 @@
             </svg>
           </button>
         </form>
-        <!-- Пользователь -->
+         <!-- Пользователь -->
         <a href="#" class="user navbar__user">
-          <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="avatar user__avatar">
+          <img src="img/user-avatar.webp" alt="Avatar: Nathan" class="avatar user__avatar">
           <span class="user__name">Nathan</span>
         </a>
         <button class="menu-button navbar-top__menu-button">
@@ -59,9 +56,9 @@
       <div class="container navbar-menu__container">
         <!-- Пользователь -->
         <a href="#" class="user navbar-menu__user hidden">
-          <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="avatar user__avatar">
+          <img src="img/user-avatar.webp" alt="Avatar: Nathan" class="avatar user__avatar">
           <span class="user__name">Nathan</span>
-        </a> 
+        </a>
         <!-- Форма поиска -->
         <form action="#" class="search navbar-menu__search hidden">
           <input type="search" class="search__input" placeholder="Search Location">
