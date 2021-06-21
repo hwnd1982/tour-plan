@@ -16,10 +16,7 @@
           <img
             src="img/vertical-logo.min.svg"
             alt="Logo: Best Tour Plan"
-            class="logo-vertical__img animated"
-            animation-type="scale" 
-            animation-data="scale"
-            animation-delay="0"
+            class="logo-vertical__img"
           >
         </a>
         <nav class="footer-top__menu nav-menu">
