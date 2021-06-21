@@ -191,7 +191,7 @@
           <a href="#" class="footer-bottom__link">Conditions of use</a>
           <a href="#" class="footer-bottom__link">Cancellation policy</a>
         </div>
-        <img src="img/payment-icons.webp" alt="" class="footer-bottom__payment">
+        <img src="img/payment-icons.jpg" alt="" class="footer-bottom__payment">
       </div>
       <!-- /.footer-bottom -->
     </div>

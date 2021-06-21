@@ -40,7 +40,7 @@
         </form>
          <!-- Пользователь -->
         <a href="#" class="user navbar__user">
-          <img src="img/user-avatar.webp" alt="Avatar: Nathan" class="avatar user__avatar">
+          <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="avatar user__avatar">
           <span class="user__name">Nathan</span>
         </a>
         <button class="menu-button navbar-top__menu-button">
@@ -56,7 +56,7 @@
       <div class="container navbar-menu__container">
         <!-- Пользователь -->
         <a href="#" class="user navbar-menu__user hidden">
-          <img src="img/user-avatar.webp" alt="Avatar: Nathan" class="avatar user__avatar">
+          <img src="img/user-avatar.jpg" alt="Avatar: Nathan" class="avatar user__avatar">
           <span class="user__name">Nathan</span>
         </a>
         <!-- Форма поиска -->
