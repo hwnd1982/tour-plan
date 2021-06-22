@@ -15,7 +15,7 @@
   >
   <link 
     rel="preload" 
-    as="font"
+    as="style"
     href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
   >
   <link
@@ -23,8 +23,8 @@
     href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
   >
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/modal.js"></script>
   <script src="js/mobile-menu.js" defer></script>
-  <script src="js/modal.js" defer></script>
   <script src="js/jquery-3.6.0.min.js" defer></script>
   <script src="js/jquery.validate.min.js" defer></script>
   <script src="js/jquery.mask.min.js" defer></script>
