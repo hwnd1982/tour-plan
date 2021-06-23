@@ -77,7 +77,7 @@ document.addEventListener("click", (event) => {
       messages: {
         name: {
           required: "*Please, specify your name",
-          minlength: "Name must be more than 2 letters"
+          minlength: "*Name must be more than 2 letters"
         },
         phone: {
           required: "*Please, enter your phone number",
