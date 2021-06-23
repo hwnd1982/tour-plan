@@ -12,7 +12,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <a href="index.html" class="footer-top__logo logo-vertical">
+        <a href="index.html" class="footer-top__logo logo-vertical" animation-data="played">
           <img
             src="img/vertical-logo.min.svg"
             alt="Logo: Best Tour Plan"
