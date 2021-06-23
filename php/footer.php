@@ -55,7 +55,7 @@
         <div class="footer-top__menu social-network">
           <span class="social-network__title">Social Network</span>
           
-          <a href="https://www.facebook.com/" class="social-network__link">
+          <a href="https://www.facebook.com/" target="_blank" class="social-network__link">
             <svg
               class="social-network__icons icon-facebook"
               width="20"
@@ -64,7 +64,7 @@
               <use href="img/icons.svg#facebook"></use>
             </svg>
           </a>
-          <a href="https://www.youtube.com/" class="social-network__link">
+          <a href="https://www.youtube.com/" target="_blank" class="social-network__link">
             <svg
               class="social-network__icons icon-youtube"
               width="20"
@@ -73,7 +73,7 @@
               <use href="img/icons.svg#youtube"></use>
             </svg>
           </a>
-          <a href="https://www.instagram.com/" class="social-network__link">
+          <a href="https://www.instagram.com/" target="_blank" class="social-network__link">
             <svg
               class="social-network__icons icon-instagram"
               width="20"

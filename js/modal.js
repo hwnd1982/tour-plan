@@ -39,6 +39,8 @@ document.addEventListener("click", (event) => {
     if ($(this).hasClass("subscribe"))
       $(this).validate({
         errorLabelContainer: $('.mailing__invalid-container'),
+        element: "form",
+        validClass: "input_required",
         errorClass: "invalid",
         rules: {
           email: {
@@ -47,17 +49,24 @@ document.addEventListener("click", (event) => {
           }
         },
         messages: {
-          search: "Please enter your requestd",
           email: {
-            required: "We need your email address to contact you",
-            email: "Your email address must be in the format of name@domain.com"
+            required: "*Please, enter your email address",
+            email: "*Format must be name@domain.com"
           }
-        }
+        },
+        highlight: function (element, errorClass, validClass) {
+          $(element).addClass(errorClass).removeClass(validClass);
+        },
+        unhighlight: function (element, errorClass, validClass) {
+          $(element).removeClass(errorClass).addClass(validClass);
+      }
       })
     else 
       $(this).validate({
+      element: "form",
+      validClass: "input_required",
       errorClass: "invalid",
-      
+
       rules: {
         email: {
           required: true,
@@ -67,24 +76,34 @@ document.addEventListener("click", (event) => {
 
       messages: {
         name: {
-          required: "Please specify your name",
-          minlength: "Name length cannot be less than 2 letters"
+          required: "*Please, specify your name",
+          minlength: "Name must be more than 2 letters"
         },
         phone: {
-          required: "We need your phone number to contact you",
-          minlength: "Your phone number must be in the format of +7 (999) 999-99-99"
+          required: "*Please, enter your phone number",
+          minlength: "*Format must be +7 (999) 999-99-99"
         },
         email: {
-          required: "We need your email address to contact you",
-          email: "Your email address must be in the format of name@domain.com"
+          required: "*Please, enter your email address",
+          email: "*Format must be name@domain.com"
         }
+      },
+      highlight: function (element, errorClass, validClass) {
+        $(element).addClass(errorClass).removeClass(validClass);
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        $(element).removeClass(errorClass).addClass(validClass);
       }
     })
+
+    
     const subscribeForm = document.querySelector(".subscribe")
     if (childOf(event.target, 'subscribe'))
       if (!subscribeForm.firstElementChild.checkValidity())
         subscribeForm.lastElementChild.classList.add("invalid")
   })
+  
+  
 
   $(document).ready(function(){
     $('.phone').mask('+7 (000) 000-00-00');

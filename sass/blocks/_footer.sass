@@ -28,11 +28,16 @@
       width: 100%
       justify-self: center
       fill: $link-color
+    &__map-marker
+      &-icon
+        margin-top: 3px
     &__phone-call
       display: flex
       flex-direction: column
       grid-column: 2
       grid-row: 2
+      &-icon
+        margin-top: 3px
     &__email
       align-self: center
       grid-column: 2
@@ -42,13 +47,14 @@
     &__text
       color: $link-color
       font-size: 14px
-      line-height: 160%
+      line-height: 22px
     &__link
       white-space: nowrap
       text-decoration: none
       cursor: pointer
     &__info
       margin-top: 22px
+      margin-left: 4px
       display: grid
       column-gap: 20px
       row-gap: 22px
@@ -155,6 +161,8 @@
       color: $primery
       &::placeholder
         color: lighten($primery, 30%)
+  &__input-group
+    position: relative
   &__message
     grid-column: span 2
     padding: 18px 23px
@@ -180,5 +188,6 @@
   &__note
     font-weight: 700
     justify-self: end
-    align-self: center
+    align-self: end
     color: #e0e0e0
+    line-height: 50px

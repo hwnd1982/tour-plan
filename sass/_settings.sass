@@ -4,9 +4,11 @@ body
   font-family: 'Mulish', sans-serif
   color: $text-color
   background-color: #f5fafe
+  min-width: 320px
   &.lock
     overflow: hidden
 .container
+  min-width: 280px
   max-width: 1110px
   margin: auto
 img
@@ -15,6 +17,11 @@ img
   color: $primery
   animation: headShake
   animation-duration: 0.7s
+label
+  &.invalid
+    position: absolute
+    left: 0
+    bottom: -14px
 .invalid-container
   & label
     font-size: 12px

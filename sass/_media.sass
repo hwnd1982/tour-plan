@@ -141,6 +141,12 @@
         &:hover, &:focus
           &::after
             width: 100%
+  .search, .subscribe
+    &__button
+      transition: 0.2s ease-in-out
+      &:hover
+        background-color: lighten($primery, 20%)
+        color: darken($alt-text-color, 20%)
   .user
     transition: 0.2s ease-in-out
     &::after
@@ -175,11 +181,25 @@
         transition: 0.2s ease-in-out
         &:hover
           transform: scale(1.1)
-  .footer
+    &__button
+      transition: 0.2s ease-in-out
+      &:hover
+        transform: translate(2px, 2px)
+  .packag-card, .other-activities
+    &__button
+      transition: 0.2s ease-in-out
+      &:hover
+        transform: translate(2px, 2px)
+  .footer, .modal
     &-contact
       &__link
         &:hover
           color: $alt-text-color
+    &-form
+      &__button
+        transition: 0.2s ease-in-out
+        &:hover
+          transform: translate(2px, -2px)
   .nav-menu
     &__link
       &:hover
@@ -188,6 +208,11 @@
     &__link
       &:hover
         fill: $alt-text-color
+  .modal
+    &__button-close
+      transition: 0.2s ease-in-out
+      &:hover
+        transform: scale(1.1)
 @media (max-width: 767px)
   .container
     max-width: 596px
@@ -480,6 +505,8 @@
     &-contact
       padding-bottom: 30px
       grid-template: min-content 1fr / 1fr
+      &__info
+        column-gap: 7px
     &-bottom
       padding-bottom: 22px
       row-gap: 10px
@@ -505,10 +532,16 @@
       grid-row: 4
       grid-column: 1
       justify-self: start
+      line-height: 15px
   .social-network
     &__title
       margin-right: 0
 @media (max-width: 576px)
+  body
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      width: 0px
+      background: transparent
   .mailing
     background-size: 700% auto
   .logo
